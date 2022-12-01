@@ -1,0 +1,115 @@
+@import "~bootstrap/scss/bootstrap";
+@import "custom";
+
+$dark-blue: rgb(1, 0, 138);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  div {
+    position: relative;
+  }
+}
+
+.centering {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin footer-common {
+  color: $dark-blue;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  @include footer-common;
+  a {
+    @include footer-common;
+    letter-spacing: 0.15rem;
+  }
+  p {
+    @include footer-common;
+    letter-spacing: 0.15rem;
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      font-size: 1.5rem;
+      letter-spacing: 1rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.avatar {
+  /* Rounded border */
+  border-radius: 50%;
+
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  /* Size */
+  height: 4rem;
+  width: 4rem;
+
+  .avatar__image {
+    /* Size */
+    height: 20%;
+    width: 20%;
+  }
+}
+
+.brand-h1 {
+  letter-spacing: 0.2rem;
+}
+
+.theme-btn {
+  color: rgb(0, 0, 0);
+  border: 0.15rem solid rgb(0, 0, 0);
+}
+
+.contact-form {
+  display: flexbox;
+  flex-direction: row;
+}

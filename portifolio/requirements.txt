@@ -1,0 +1,9 @@
+Add aria labels and other stuff to improve the accessibility
+aria-label="open"
+
+colors to user 
+-blue
+-green
+-purple
+-red
+-orange
