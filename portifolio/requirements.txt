@@ -7,3 +7,26 @@ colors to user
 -purple
 -red
 -orange
+
+
+
+
+
+Projects
+-SAP PMGM and EC - TCS
+
+-Portifolio (https://github.com/varunteja007006/Portifolio)
+
+-Simple Blog (https://github.com/varunteja007006/Simple-Blog-React)
+
+-React Notes (https://github.com/varunteja007006/react_notes)
+
+-Fit App (https://github.com/varunteja007006/MERNstack)
+
+-Sports Management Website (https://github.com/varunteja007006/Sportz-Management-Website-Bootstrap) CSS, HTML, JavaScript, MySQL, PHP
+
+-Budget (https://github.com/varunteja007006/Budget) Django, CSS (Bootstrap css), HTML, JavaScript
+
+-Twitter Sentiment Analysis (https://github.com/varunteja007006/Twitter-Sentiment-analysis-on-politicians-using-Django) Django, CSS, HTML, JavaScript
+
+-Collabs (https://github.com/varunteja007006/collabs_WebApp_Django) Django, CSS (materialize css) , HTML, Jquery

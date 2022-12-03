@@ -9,26 +9,27 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function navbarTop() {
   return (
     <div>
-      <Navbar
-        id="navbartop"
-        collapseOnSelect
-        expand="lg"
-        bg="light"
-      >
+      <Navbar id="navbartop" collapseOnSelect expand="lg" className="navbartop">
         <Container>
           <Navbar.Brand href="#Home">
-            <h1 className="brand-h1">MyPortifolio</h1>{" "}
-          </Navbar.Brand>{" "}
+            <h1 className="brand-h1 m-0 p-0">MyPortifolio</h1>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
-              <Button variant="outline-dark-blue theme-btn">
+              <Button
+                variant="outline-dark-blue"
+                className="shadow-sm theme-btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="Click to change the theme"
+              >
                 <span>
                   <i className="fa-regular fa-moon" alt=""></i>
                 </span>
                 Light
-              </Button>{" "}
+              </Button>
             </Nav>
           </Navbar.Collapse>
         </Container>

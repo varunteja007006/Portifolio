@@ -1,13 +1,11 @@
 /* make the customizations */
 $theme-colors: (
-    "info": tomato,
-    "bg-grey": rgba(105, 105, 105, 0.61),
-    "dark-blue":rgb(1, 0, 138),
-    "lighter-blue":rgb(204, 204, 232),
-    "lighter-green":rgb(211, 232, 204),
+  "info": rgb(255, 99, 71),
+  "dark-blue": rgb(1, 0, 138),
+  "lighter-blue": rgb(148, 213, 248, 0.6),
 );
 
-/* $body-bg: #000; */
+$body-bg: rgba(232, 190, 76, 0.5);
 
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
