@@ -4,7 +4,8 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+
+import testfile from "../assests/vt1.jpeg";
 
 function navbarTop() {
   return (
@@ -18,11 +19,21 @@ function navbarTop() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
+              <a
+                href={testfile}
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Click to download my resume"
+                className="btn btn-dark-blue btn send-btn me-3 shadow-sm"
+                download
+              >
+                Resume
+              </a>
               <Button
                 variant="outline-dark-blue"
                 className="shadow-sm theme-btn"
                 data-bs-toggle="tooltip"
-                data-bs-placement="top"
+                data-bs-placement="bottom"
                 title="Click to change the theme"
               >
                 <span>
