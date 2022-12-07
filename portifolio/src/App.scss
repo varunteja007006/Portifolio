@@ -163,3 +163,32 @@ footer {
 .list-group-item-center-shadow {
   box-shadow: $box-shadow;
 }
+
+/* Scrollbar effect for project images */
+.card-img-size {
+  padding: 0.5rem;
+  height: 18rem;
+  overflow: auto;
+}
+
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: $pic-color-one;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $pic-color-two; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $pic-color-three; 
+}

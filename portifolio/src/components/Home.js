@@ -8,10 +8,19 @@ import {
   Card,
   ListGroup,
   Collapse,
+  Badge,
 } from "react-bootstrap";
 
-import myimage from "../assests/vt1.jpeg";
-import sap from "../assests/sap_successfactors.jpg";
+import budget from "../assests/budget.png";
+import collabs from "../assests/collabs.png";
+import fit from "../assests/fit.png";
+import myblog from "../assests/myblog.png";
+import myImage from "../assests/myImage.jpeg";
+import portifolio from "../assests/portifolio.png";
+import sap from "../assests/sap.jpg";
+import sentiment_analysis from "../assests/sentiment_analysis.png";
+import simple_notes from "../assests/simple_notes.png";
+import sports_management from "../assests/sports_management.png";
 
 function Home() {
   const [showMore, setShowMore] = useState("Show More...");
@@ -71,7 +80,7 @@ function Home() {
                   </Col>
                   <Col xs={12} md={4} lg={4}>
                     <img
-                      src={myimage}
+                      src={myImage}
                       alt=""
                       className="w-100 myimage shadow-lg"
                     />
@@ -92,11 +101,10 @@ function Home() {
                 <ListGroup horizontal className="shadow card-text">
                   <ListGroup.Item className="w-50 centering">
                     <p className="m-0 p-0">
-                      <b> SAP SuccessFactors Consultant (2021 - Present)</b>
-                    </p>
-                    <p className="text-muted m-0 p-0">
-                      Tata Consultancy Services
-                    </p>
+                      <b> SAP SuccessFactors Consultant</b>
+                    </p>{" "}
+                    <p className="m-0 p-0">Tata Consultancy Services</p>
+                    <p className="text-muted m-1 p-0">2021 - Present</p>
                   </ListGroup.Item>
                   <ListGroup.Item className="text-justify w-50">
                     <ul>
@@ -122,11 +130,15 @@ function Home() {
                 <ListGroup horizontal className="shadow card-text">
                   <ListGroup.Item variant=" " className="w-50 centering">
                     <p className="m-0 p-0">
-                      <b>Graduation - BTech CSE (2017-2021)</b>
+                      <b>Computer Science Engineering (B.Tech) </b>
                     </p>
-                    <p className="text-muted m-0 p-0">8.6 CGPA</p>
+                    <p className="m-0 p-0">8.6 CGPA</p>
+                    <p className="text-muted m-0 p-0">2017-2021</p>
                   </ListGroup.Item>
-                  <ListGroup.Item variant=" " className="text-justify w-50">
+                  <ListGroup.Item
+                    variant=" "
+                    className="text-justify w-50 centering"
+                  >
                     Vel Tech R&D Institute of Science & Technology, Deemed to be
                     a University
                   </ListGroup.Item>
@@ -134,22 +146,30 @@ function Home() {
                 <ListGroup horizontal className="mt-1 shadow card-text">
                   <ListGroup.Item variant=" " className="w-50 centering">
                     <p className="m-0 p-0">
-                      <b>Intermediate - MPC (2017-2015)</b>
+                      <b>Intermediate - MPC</b>
                     </p>
-                    <p className="text-muted m-0 p-0">95%</p>
+                    <p className="m-0 p-0">95%</p>
+                    <p className="text-muted m-0 p-0">2017-2015</p>
                   </ListGroup.Item>
-                  <ListGroup.Item variant=" " className="text-justify w-50">
+                  <ListGroup.Item
+                    variant=" "
+                    className="text-justify w-50 centering"
+                  >
                     Narayana Junior College
                   </ListGroup.Item>
                 </ListGroup>
                 <ListGroup horizontal className="mt-1 shadow card-text">
                   <ListGroup.Item variant=" " className="w-50 centering">
                     <p className="m-0 p-0">
-                      <b>Secondary Education - 10th (2015)</b>
+                      <b>Secondary Education - 10th</b>
                     </p>
-                    <p className="text-muted m-0 p-0">9.8 CGPA</p>
+                    <p className="m-0 p-0">9.8 CGPA</p>
+                    <span className="text-muted m-0 p-0">2015</span>
                   </ListGroup.Item>
-                  <ListGroup.Item variant=" " className="text-justify w-50">
+                  <ListGroup.Item
+                    variant=" "
+                    className="text-justify w-50 centering"
+                  >
                     The Bodhi School
                   </ListGroup.Item>
                 </ListGroup>
@@ -222,258 +242,319 @@ function Home() {
               <Card className="dropshadow p-2">
                 <Card.Body>
                   <Card.Title>Projects</Card.Title>
-                  <Card className="border border-dark-blue rounded-2 shadow">
-                    <Row>
-                      <Col xs={12} md={12} lg={4} className="m-auto">
-                        <Card.Img variant="top" src={sap} />
-                      </Col>
-                      <Col>
-                        <Card.Body>
-                          <Card.Title>
-                            SAP SuccessFactors EC & PMGM (Present)
-                          </Card.Title>
-                          <div className="text-justify card-text">
-                            <p className="text-muted center">
-                              Tata Consultancy Services
-                            </p>
-                            Update descriptions
-                          </div>
-                          <a
-                            href="https://github.com/varunteja007006?tab=repositories"
-                            target="_blank"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Github"
-                            className="btn btn-outline-dark-blue project-btn"
-                          >
-                            <i className="fa-brands fa-github" alt=""></i>
-                          </a>
-                        </Card.Body>
-                      </Col>
-                    </Row>
+                  <Card className="border rounded-2 mt-2 mb-2 shadow">
+                    <div className="m-1 p-1">
+                      <Card.Img src={sap} style={{ height: "50%" }} />
+                    </div>
+                    <Card.Body>
+                      <Card.Title>SAP SuccessFactors EC & PMGM</Card.Title>
+                      <div className="text-justify card-text">
+                        <p className="text-muted center">
+                          Tata Consultancy Services
+                        </p>
+                        <ul>
+                          <li>
+                            Supporting and Testing SAP Successfactors EC and
+                            PMGM modules.
+                          </li>
+                          <li className="mt-2">
+                            Updating and Providing enhancements to
+                            clients/customers that will increase their
+                            productivity and interoperability
+                          </li>
+                        </ul>
+                      </div>
+                    </Card.Body>
                   </Card>
-                  <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                    <Row>
-                      <Col xs={12} md={12} lg={4} className="m-auto">
-                        <Card.Img variant="top" src={sap} />
-                      </Col>
-                      <Col>
-                        <Card.Body>
-                          <Card.Title>Fit App</Card.Title>
-                          <div className="text-justify card-text">
-                            <p className="text-muted center">
-                              Mongo DB, Express JS, Node JS, React, SASS
-                            </p>
-                            Update descriptions
-                          </div>
-                          <a
-                            href="https://github.com/varunteja007006/MERNstack"
-                            target="_blank"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Github"
-                            className="btn btn-outline-dark-blue project-btn"
-                          >
-                            <i className="fa-brands fa-github" alt=""></i>
-                          </a>
-                        </Card.Body>
-                      </Col>
-                    </Row>
+                  <Card className="border rounded-2 mb-2 shadow">
+                    <div className="card-img-size">
+                      <Card.Img src={fit} />
+                    </div>
+                    <Card.Body>
+                      <Card.Title>Fit App</Card.Title>
+                      <div className="text-justify card-text">
+                        <p className="center">
+                          <Badge pill bg="warning" text="dark">
+                            Mongo DB
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            Express JS
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            Node JS
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            React
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            Bootstrap SASS
+                          </Badge>
+                        </p>
+                        MERN stack application, React on the front end and on
+                        the backend Node js and Express as middleware with
+                        MongoDB database. Hosted this web app on{" "}
+                        <Badge bg="success">Heroku</Badge> (backend) &{" "}
+                        <Badge bg="success">Netlify</Badge> (frontend).
+                      </div>
+                      <a
+                        href="https://github.com/varunteja007006/MERNstack"
+                        target="_blank"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Github Link"
+                        className="btn btn-outline-dark-blue project-btn mt-2"
+                      >
+                        <i className="fa-brands fa-github" alt=""></i>
+                      </a>
+                      <i class="fa-solid fa-up-right-from-square"></i>
+                    </Card.Body>
                   </Card>
-                  <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                    <Row>
-                      <Col xs={12} md={12} lg={4} className="m-auto">
-                        <Card.Img variant="top" src={sap} />
-                      </Col>
-                      <Col>
-                        <Card.Body>
-                          <Card.Title>Twitter Sentiment Analysis</Card.Title>
-                          <div className="text-justify card-text">
-                            <p className="text-muted center">
-                              Django, CSS, HTML, JavaScript
-                            </p>
-                            Update descriptions
-                          </div>
-                          <a
-                            href="https://github.com/varunteja007006/Twitter-Sentiment-analysis-on-politicians-using-Django"
-                            target="_blank"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Github"
-                            className="btn btn-outline-dark-blue project-btn"
-                          >
-                            <i className="fa-brands fa-github" alt=""></i>
-                          </a>
-                        </Card.Body>
-                      </Col>
-                    </Row>
+                  <Card className="border rounded-2 mb-2 shadow">
+                    <div className="card-img-size">
+                      <Card.Img src={sentiment_analysis} />
+                    </div>
+                    <Card.Body>
+                      <Card.Title>Twitter Sentiment Analysis</Card.Title>
+                      <div className="text-justify card-text">
+                        <p className="center">
+                          <Badge pill bg="warning" text="dark">
+                            Django
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            CSS
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            HTML
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            JavaScript
+                          </Badge>{" "}
+                        </p>
+                        Update descriptionsPenatibus consectetur ultricies ex
+                        hendrerit faucibus facilisi. Consectetur lobortis
+                        suscipit eleifend quam in eros aptent ornare iaculis.
+                        Natoque molestie hac nec inceptos odio. Lacinia nullam
+                        ante tincidunt euismod placerat arcu efficitur enim orci
+                        faucibus libero.
+                      </div>
+                      <a
+                        href="https://github.com/varunteja007006/Twitter-Sentiment-analysis-on-politicians-using-Django"
+                        target="_blank"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Github Link"
+                        className="btn btn-outline-dark-blue project-btn mt-2"
+                      >
+                        <i className="fa-brands fa-github" alt=""></i>
+                      </a>
+                    </Card.Body>
                   </Card>
-                  <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                    <Row>
-                      <Col xs={12} md={12} lg={4} className="m-auto">
-                        <Card.Img variant="top" src={sap} />
-                      </Col>
-                      <Col>
-                        <Card.Body>
-                          <Card.Title>Sports Management Website</Card.Title>
-                          <div className="text-justify card-text">
-                            <p className="text-muted center">
-                              CSS, HTML, JavaScript, MySQL, PHP
-                            </p>
-                            Update descriptions
-                          </div>
-                          <a
-                            href="https://github.com/varunteja007006/Sportz-Management-Website-Bootstrap"
-                            target="_blank"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Github"
-                            className="btn btn-outline-dark-blue project-btn"
-                          >
-                            <i className="fa-brands fa-github" alt=""></i>
-                          </a>
-                        </Card.Body>
-                      </Col>
-                    </Row>
+                  <Card className="border rounded-2 mb-2 shadow">
+                    <div className="card-img-size">
+                      <Card.Img src={sports_management} />
+                    </div>
+                    <Card.Body>
+                      <Card.Title>Sports Management Website</Card.Title>
+                      <div className="text-justify card-text">
+                        <p className="center">
+                          <Badge pill bg="warning" text="dark">
+                            CSS
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            HTML
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            JavaScript
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            MySQL
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            PHP
+                          </Badge>{" "}
+                        </p>
+                        Update descriptions
+                      </div>
+                      <a
+                        href="https://github.com/varunteja007006/Sportz-Management-Website-Bootstrap"
+                        target="_blank"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Github Link"
+                        className="btn btn-outline-dark-blue project-btn mt-2"
+                      >
+                        <i className="fa-brands fa-github" alt=""></i>
+                      </a>
+                    </Card.Body>
                   </Card>
-                  <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                    <Row>
-                      <Col xs={12} md={12} lg={4} className="m-auto">
-                        <Card.Img variant="top" src={sap} />
-                      </Col>
-                      <Col>
-                        <Card.Body>
-                          <Card.Title>Budget</Card.Title>
-                          <div className="text-justify card-text">
-                            <p className="text-muted center">
-                              Django, CSS (Bootstrap css), HTML, JavaScript
-                            </p>
-                            Update descriptions
-                          </div>
-                          <a
-                            href="https://github.com/varunteja007006/Budget"
-                            target="_blank"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Github"
-                            className="btn btn-outline-dark-blue project-btn"
-                          >
-                            <i className="fa-brands fa-github" alt=""></i>
-                          </a>
-                        </Card.Body>
-                      </Col>
-                    </Row>
+                  <Card className="border rounded-2 mb-2 shadow">
+                    <div className="card-img-size">
+                      <Card.Img src={budget} />
+                    </div>
+                    <Card.Body>
+                      <Card.Title>Budget</Card.Title>
+                      <div className="text-justify card-text">
+                        <p className="center">
+                          <Badge pill bg="warning" text="dark">
+                            Django
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            Bootstrap CSS
+                          </Badge>{" "}
+                          <Badge pill bg="warning" text="dark">
+                            HTML
+                          </Badge>{" "}
+                        </p>
+                        Update descriptions
+                      </div>
+                      <a
+                        href="https://github.com/varunteja007006/Budget"
+                        target="_blank"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Github Link"
+                        className="btn btn-outline-dark-blue project-btn mt-2"
+                      >
+                        <i className="fa-brands fa-github" alt=""></i>
+                      </a>
+                    </Card.Body>
                   </Card>
                   <Collapse in={open}>
-                    <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                      <Row>
-                        <Col xs={12} md={12} lg={4} className="m-auto">
-                          <Card.Img variant="top" src={sap} />
-                        </Col>
-                        <Col>
-                          <Card.Body>
-                            <Card.Title>Collabs</Card.Title>
-                            <div className="text-justify card-text">
-                              <p className="text-muted center">React, SCSS</p>
-                              Update descriptions...
-                            </div>
-                            <a
-                              href="https://github.com/varunteja007006/collabs_WebApp_Django"
-                              target="_blank"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Github"
-                              className="btn btn-outline-dark-blue project-btn"
-                            >
-                              <i className="fa-brands fa-github" alt=""></i>
-                            </a>
-                          </Card.Body>
-                        </Col>
-                      </Row>
+                    <Card className="border rounded-2 mb-2 shadow">
+                      <div className="card-img-size">
+                        <Card.Img src={collabs} />
+                      </div>
+                      <Card.Body>
+                        <Card.Title>Collabs</Card.Title>
+                        <div className="text-justify card-text">
+                          <p className="center">
+                            <Badge pill bg="warning" text="dark">
+                              Django
+                            </Badge>{" "}
+                            <Badge pill bg="warning" text="dark">
+                              Materialize CSS
+                            </Badge>{" "}
+                            <Badge pill bg="warning" text="dark">
+                              HTML
+                            </Badge>{" "}
+                          </p>
+                          Update descriptions...
+                        </div>
+                        <a
+                          href="https://github.com/varunteja007006/collabs_WebApp_Django"
+                          target="_blank"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Github Link"
+                          className="btn btn-outline-dark-blue project-btn mt-2"
+                        >
+                          <i className="fa-brands fa-github" alt=""></i>
+                        </a>
+                      </Card.Body>
                     </Card>
                   </Collapse>
                   <Collapse in={open}>
-                    <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                      <Row>
-                        <Col xs={12} md={12} lg={4} className="m-auto">
-                          <Card.Img variant="top" src={sap} />
-                        </Col>
-                        <Col>
-                          <Card.Body>
-                            <Card.Title>Portifolio</Card.Title>
-                            <div className="text-justify card-text">
-                              <p className="text-muted center">React, SCSS</p>
-                              Update descriptions...
-                            </div>
-                            <a
-                              href="https://github.com/varunteja007006/Portifolio"
-                              target="_blank"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Github"
-                              className="btn btn-outline-dark-blue project-btn"
-                            >
-                              <i className="fa-brands fa-github" alt=""></i>
-                            </a>
-                          </Card.Body>
-                        </Col>
-                      </Row>
+                    <Card className="border rounded-2 mb-2 shadow">
+                      <div className="card-img-size">
+                        <Card.Img src={portifolio} />
+                      </div>
+                      <Card.Body>
+                        <Card.Title>Portifolio</Card.Title>
+                        <div className="text-justify card-text">
+                          <p className="center">
+                            <Badge pill bg="warning" text="dark">
+                              React
+                            </Badge>{" "}
+                            <Badge pill bg="warning" text="dark">
+                              Bootstrap SASS
+                            </Badge>{" "}
+                          </p>
+                          A simple portifolio website built on react.
+                        </div>
+                        <a
+                          href="https://github.com/varunteja007006/Portifolio"
+                          target="_blank"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Github Link"
+                          className="btn btn-outline-dark-blue project-btn mt-2"
+                        >
+                          <i className="fa-brands fa-github" alt=""></i>
+                        </a>
+                        <a
+                          href=""
+                          target="_blank"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Launch Web App"
+                          className="btn btn-outline-dark-blue project-btn ms-3 mt-2"
+                        >
+                          <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                      </Card.Body>
                     </Card>
                   </Collapse>
                   <Collapse in={open}>
-                    <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                      <Row>
-                        <Col xs={12} md={12} lg={4} className="m-auto">
-                          <Card.Img variant="top" src={sap} />
-                        </Col>
-                        <Col>
-                          <Card.Body>
-                            <Card.Title>Simple Blog</Card.Title>
-                            <div className="text-justify card-text">
-                              <p className="text-muted center">React, SCSS</p>
-                              Update descriptions...
-                            </div>
-                            <a
-                              href="https://github.com/varunteja007006/Simple-Blog-React"
-                              target="_blank"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Github"
-                              className="btn btn-outline-dark-blue project-btn"
-                            >
-                              <i className="fa-brands fa-github" alt=""></i>
-                            </a>
-                          </Card.Body>
-                        </Col>
-                      </Row>
+                    <Card className="border rounded-2 mb-2 shadow">
+                      <div className="card-img-size">
+                        <Card.Img src={myblog} />
+                      </div>
+                      <Card.Body>
+                        <Card.Title>Simple Blog</Card.Title>
+                        <div className="text-justify card-text">
+                          <p className="text-muted center">
+                            <Badge pill bg="warning" text="dark">
+                              React
+                            </Badge>{" "}
+                            <Badge pill bg="warning" text="dark">
+                              Bootstrap SASS
+                            </Badge>{" "}
+                          </p>
+                          Simple Blog is built on with React and data is saved
+                          on Json server (localhost, port 8000)
+                        </div>
+                        <a
+                          href="https://github.com/varunteja007006/Simple-Blog-React"
+                          target="_blank"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Github Link"
+                          className="btn btn-outline-dark-blue project-btn mt-2"
+                        >
+                          <i className="fa-brands fa-github" alt=""></i>
+                        </a>
+                      </Card.Body>
                     </Card>
                   </Collapse>
                   <Collapse in={open}>
-                    <Card className="border border-dark-blue rounded-2 shadow mt-2">
-                      <Row>
-                        <Col xs={12} md={12} lg={4} className="m-auto">
-                          <Card.Img variant="top" src={sap} />
-                        </Col>
-                        <Col>
-                          <Card.Body>
-                            <Card.Title>React Notes</Card.Title>
-                            <div className="text-justify card-text">
-                              <p className="text-muted center">React, SCSS</p>
-                              Update descriptions...
-                            </div>
-                            <a
-                              href="https://github.com/varunteja007006/react_notes"
-                              target="_blank"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Github"
-                              className="btn btn-outline-dark-blue project-btn"
-                            >
-                              <i className="fa-brands fa-github" alt=""></i>
-                            </a>
-                          </Card.Body>
-                        </Col>
-                      </Row>
+                    <Card className="border rounded-2 mb-2 shadow">
+                      <div className="card-img-size">
+                        <Card.Img src={simple_notes} />
+                      </div>
+                      <Card.Body>
+                        <Card.Title>React Notes</Card.Title>
+                        <div className="text-justify card-text">
+                          <p className="center">
+                            <Badge pill bg="warning" text="dark">
+                              React
+                            </Badge>{" "}
+                            <Badge pill bg="warning" text="dark">
+                              Bootstrap SASS
+                            </Badge>{" "}
+                          </p>
+                          Update descriptions...
+                        </div>
+                        <a
+                          href="https://github.com/varunteja007006/react_notes"
+                          target="_blank"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Github Link"
+                          className="btn btn-outline-dark-blue project-btn mt-2"
+                        >
+                          <i className="fa-brands fa-github" alt=""></i>
+                        </a>
+                      </Card.Body>
                     </Card>
                   </Collapse>
                   <Button
