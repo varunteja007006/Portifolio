@@ -27,8 +27,10 @@ function navbarTop() {
                 className="btn btn-dark-blue btn send-btn me-3 shadow-sm"
                 download
               >
+                <i className="fa-solid fa-file-arrow-down"></i>{" "}
                 Resume
               </a>
+              {/*
               <Button
                 variant="outline-dark-blue"
                 className="shadow-sm theme-btn"
@@ -41,6 +43,7 @@ function navbarTop() {
                 </span>
                 Light
               </Button>
+              */}
             </Nav>
           </Navbar.Collapse>
         </Container>

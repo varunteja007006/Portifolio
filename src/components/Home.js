@@ -17,7 +17,7 @@ import fit from "../assests/fit.png";
 import myblog from "../assests/myblog.png";
 import myImage from "../assests/myImage.jpeg";
 import portifolio from "../assests/portifolio.png";
-import sap from "../assests/sap.jpg";
+import sap from "../assests/sap_2.jpg";
 import sentiment_analysis from "../assests/sentiment_analysis.png";
 import simple_notes from "../assests/simple_notes.png";
 import sports_management from "../assests/sports_management.png";
@@ -28,11 +28,11 @@ function Home() {
   const [open, setOpen] = useState(false);
 
   const changeBtnStatus = () => {
-    if (showMore == "Show More...") {
+    if (showMore === "Show More...") {
       setShowMore(null);
       setShowLess("Show Less...");
     }
-    if (showLess == "Show Less...") {
+    if (showLess === "Show Less...") {
       setShowMore("Show More...");
       setShowLess(null);
     }
@@ -66,10 +66,8 @@ function Home() {
               <Card.Body>
                 <Row className="g-4 justify-content-md-center">
                   <Col xs={12} md={8} lg={8}>
-                    <Card.Title>VARUN TEJA K</Card.Title>
-                    <p className="job-role text-muted mb-1">
-                      Full Stack Developer
-                    </p>
+                    <h3 className="card-title">VARUN TEJA K</h3>
+                    <p className="mb-1">Full Stack Developer</p>
                     <Card.Text className="text-justify">
                       I am a computer science engineer with problem-solving
                       skills to solve challenges in the workplace. I love to
@@ -244,7 +242,11 @@ function Home() {
                   <Card.Title>Projects</Card.Title>
                   <Card className="border rounded-2 mt-2 mb-2 shadow">
                     <div className="m-1 p-1">
-                      <Card.Img src={sap} style={{ height: "50%" }} />
+                      <Card.Img
+                        src={sap}
+                        style={{ height: "50%" }}
+                        className="border border-2 rounded-2"
+                      />
                     </div>
                     <Card.Body>
                       <Card.Title>SAP SuccessFactors EC & PMGM</Card.Title>
@@ -268,7 +270,10 @@ function Home() {
                   </Card>
                   <Card className="border rounded-2 mb-2 shadow">
                     <div className="card-img-size">
-                      <Card.Img src={fit} />
+                      <Card.Img
+                        src={fit}
+                        className="border border-3 border-dark rounded-2"
+                      />
                     </div>
                     <Card.Body>
                       <Card.Title>Fit App</Card.Title>
@@ -306,12 +311,24 @@ function Home() {
                       >
                         <i className="fa-brands fa-github" alt=""></i>
                       </a>
-                      <i class="fa-solid fa-up-right-from-square"></i>
+                      <a
+                        href="https://gleaming-rabanadas-387c5c.netlify.app"
+                        target="_blank"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Launch Web App"
+                        className="btn btn-outline-dark-blue project-btn ms-3 mt-2"
+                      >
+                        <i className="fa-solid fa-up-right-from-square"></i>
+                      </a>
                     </Card.Body>
                   </Card>
                   <Card className="border rounded-2 mb-2 shadow">
                     <div className="card-img-size">
-                      <Card.Img src={sentiment_analysis} />
+                      <Card.Img
+                        src={sentiment_analysis}
+                        className="border border-3 border-dark rounded-2"
+                      />
                     </div>
                     <Card.Body>
                       <Card.Title>Twitter Sentiment Analysis</Card.Title>
@@ -351,7 +368,10 @@ function Home() {
                   </Card>
                   <Card className="border rounded-2 mb-2 shadow">
                     <div className="card-img-size">
-                      <Card.Img src={sports_management} />
+                      <Card.Img
+                        src={sports_management}
+                        className="border border-3 border-dark rounded-2"
+                      />
                     </div>
                     <Card.Body>
                       <Card.Title>Sports Management Website</Card.Title>
@@ -389,7 +409,10 @@ function Home() {
                   </Card>
                   <Card className="border rounded-2 mb-2 shadow">
                     <div className="card-img-size">
-                      <Card.Img src={budget} />
+                      <Card.Img
+                        src={budget}
+                        className="border border-3 border-dark rounded-2"
+                      />
                     </div>
                     <Card.Body>
                       <Card.Title>Budget</Card.Title>
@@ -422,7 +445,10 @@ function Home() {
                   <Collapse in={open}>
                     <Card className="border rounded-2 mb-2 shadow">
                       <div className="card-img-size">
-                        <Card.Img src={collabs} />
+                        <Card.Img
+                          src={collabs}
+                          className="border border-3 border-dark rounded-2"
+                        />
                       </div>
                       <Card.Body>
                         <Card.Title>Collabs</Card.Title>
@@ -456,7 +482,10 @@ function Home() {
                   <Collapse in={open}>
                     <Card className="border rounded-2 mb-2 shadow">
                       <div className="card-img-size">
-                        <Card.Img src={portifolio} />
+                        <Card.Img
+                          src={portifolio}
+                          className="border border-3 border-dark rounded-2"
+                        />
                       </div>
                       <Card.Body>
                         <Card.Title>Portifolio</Card.Title>
@@ -482,14 +511,14 @@ function Home() {
                           <i className="fa-brands fa-github" alt=""></i>
                         </a>
                         <a
-                          href=""
+                          href="https://beautiful-meerkat-18a36f.netlify.app/"
                           target="_blank"
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Launch Web App"
                           className="btn btn-outline-dark-blue project-btn ms-3 mt-2"
                         >
-                          <i class="fa-solid fa-up-right-from-square"></i>
+                          <i className="fa-solid fa-up-right-from-square"></i>
                         </a>
                       </Card.Body>
                     </Card>
@@ -497,7 +526,10 @@ function Home() {
                   <Collapse in={open}>
                     <Card className="border rounded-2 mb-2 shadow">
                       <div className="card-img-size">
-                        <Card.Img src={myblog} />
+                        <Card.Img
+                          src={myblog}
+                          className="border border-3 border-dark rounded-2"
+                        />
                       </div>
                       <Card.Body>
                         <Card.Title>Simple Blog</Card.Title>
@@ -529,7 +561,10 @@ function Home() {
                   <Collapse in={open}>
                     <Card className="border rounded-2 mb-2 shadow">
                       <div className="card-img-size">
-                        <Card.Img src={simple_notes} />
+                        <Card.Img
+                          src={simple_notes}
+                          className="border border-3 border-dark rounded-2"
+                        />
                       </div>
                       <Card.Body>
                         <Card.Title>React Notes</Card.Title>
