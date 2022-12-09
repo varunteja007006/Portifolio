@@ -1,11 +1,17 @@
 /* make the customizations */
 $theme-colors: (
-  "info": rgb(255, 99, 71),
   "dark-blue": rgb(1, 0, 138),
-  "lighter-blue": rgb(148, 213, 248, 0.6),
 );
 
 $body-bg: rgba(232, 190, 76, 0.5);
+// $body-color: red;
 
+// Create your own map
+$custom-colors: (
+  "custom-color": #900
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

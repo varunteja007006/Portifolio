@@ -240,8 +240,8 @@ function Home() {
               <Card className="dropshadow p-2">
                 <Card.Body>
                   <Card.Title>Projects</Card.Title>
-                  <Card className="border rounded-2 mt-2 mb-2 shadow">
-                    <div className="m-1 p-1">
+                  <Card className="border rounded-2 mt-2 mb-4 shadow bg-card-color">
+                    <div className="m-1 p-2">
                       <Card.Img
                         src={sap}
                         style={{ height: "50%" }}
@@ -257,8 +257,9 @@ function Home() {
                         <ul>
                           <li>
                             Supporting and Testing SAP Successfactors EC and
-                            PMGM modules.
-                          </li>
+                            PMGM modules for the users in EMEA region.
+                          </li>{" "}
+                          <li>Employee Central</li>
                           <li className="mt-2">
                             Updating and Providing enhancements to
                             clients/customers that will increase their
@@ -268,8 +269,8 @@ function Home() {
                       </div>
                     </Card.Body>
                   </Card>
-                  <Card className="border rounded-2 mb-2 shadow">
-                    <div className="card-img-size">
+                  <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <div className="card-img-size mt-2 p-2">
                       <Card.Img
                         src={fit}
                         className="border border-3 border-dark rounded-2"
@@ -323,8 +324,8 @@ function Home() {
                       </a>
                     </Card.Body>
                   </Card>
-                  <Card className="border rounded-2 mb-2 shadow">
-                    <div className="card-img-size">
+                  <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <div className="card-img-size mt-2 p-2">
                       <Card.Img
                         src={sentiment_analysis}
                         className="border border-3 border-dark rounded-2"
@@ -347,12 +348,34 @@ function Home() {
                             JavaScript
                           </Badge>{" "}
                         </p>
-                        Update descriptionsPenatibus consectetur ultricies ex
-                        hendrerit faucibus facilisi. Consectetur lobortis
-                        suscipit eleifend quam in eros aptent ornare iaculis.
-                        Natoque molestie hac nec inceptos odio. Lacinia nullam
-                        ante tincidunt euismod placerat arcu efficitur enim orci
-                        faucibus libero.
+                        This is my second project. Built on the{" "}
+                        <Badge pill bg="success">
+                          Django
+                        </Badge>{" "}
+                        framework provided the flexibilty to test my{" "}
+                        <Badge pill bg="success">
+                          Python
+                        </Badge>{" "}
+                        skills. I used various Python packages -{" "}
+                        <Badge pill bg="success">
+                          NLTK
+                        </Badge>{" "}
+                        ,{" "}
+                        <Badge pill bg="success">
+                          Numpy
+                        </Badge>{" "}
+                        ,{" "}
+                        <Badge pill bg="success">
+                          TextBlob
+                        </Badge>{" "}
+                        ,{" "}
+                        <Badge pill bg="success">
+                          Tweepy
+                        </Badge>{" "}
+                        ,{" "}
+                        <Badge pill bg="success">
+                          Pandas
+                        </Badge>.
                       </div>
                       <a
                         href="https://github.com/varunteja007006/Twitter-Sentiment-analysis-on-politicians-using-Django"
@@ -366,8 +389,8 @@ function Home() {
                       </a>
                     </Card.Body>
                   </Card>
-                  <Card className="border rounded-2 mb-2 shadow">
-                    <div className="card-img-size">
+                  <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <div className="card-img-size mt-2 p-2">
                       <Card.Img
                         src={sports_management}
                         className="border border-3 border-dark rounded-2"
@@ -393,7 +416,28 @@ function Home() {
                             PHP
                           </Badge>{" "}
                         </p>
-                        Update descriptions
+                        This is my first project. It was built using{" "}
+                        <Badge pill bg="success">
+                          PHP
+                        </Badge>{" "}
+                        to communicate with{" "}
+                        <Badge pill bg="success">
+                          MySQL
+                        </Badge>{" "}
+                        server on localhost. The webpage built with{" "}
+                        <Badge pill bg="success">
+                          HTML
+                        </Badge>{" "}
+                        &{" "}
+                        <Badge pill bg="success">
+                          Bootstrap CSS
+                        </Badge>{" "}
+                        .
+                        <Badge pill bg="success">
+                          AJAX
+                        </Badge>{" "}
+                        is also used to update the contents on the homepage
+                        (Sports infomration snippets).
                       </div>
                       <a
                         href="https://github.com/varunteja007006/Sportz-Management-Website-Bootstrap"
@@ -407,8 +451,8 @@ function Home() {
                       </a>
                     </Card.Body>
                   </Card>
-                  <Card className="border rounded-2 mb-2 shadow">
-                    <div className="card-img-size">
+                  <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <div className="card-img-size mt-2 p-2">
                       <Card.Img
                         src={budget}
                         className="border border-3 border-dark rounded-2"
@@ -443,8 +487,8 @@ function Home() {
                     </Card.Body>
                   </Card>
                   <Collapse in={open}>
-                    <Card className="border rounded-2 mb-2 shadow">
-                      <div className="card-img-size">
+                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={collabs}
                           className="border border-3 border-dark rounded-2"
@@ -480,8 +524,8 @@ function Home() {
                     </Card>
                   </Collapse>
                   <Collapse in={open}>
-                    <Card className="border rounded-2 mb-2 shadow">
-                      <div className="card-img-size">
+                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={portifolio}
                           className="border border-3 border-dark rounded-2"
@@ -524,8 +568,8 @@ function Home() {
                     </Card>
                   </Collapse>
                   <Collapse in={open}>
-                    <Card className="border rounded-2 mb-2 shadow">
-                      <div className="card-img-size">
+                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={myblog}
                           className="border border-3 border-dark rounded-2"
@@ -559,8 +603,8 @@ function Home() {
                     </Card>
                   </Collapse>
                   <Collapse in={open}>
-                    <Card className="border rounded-2 mb-2 shadow">
-                      <div className="card-img-size">
+                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={simple_notes}
                           className="border border-3 border-dark rounded-2"

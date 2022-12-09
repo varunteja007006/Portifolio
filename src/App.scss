@@ -184,11 +184,15 @@ footer {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $pic-color-three; 
+  background: $pic-color-three;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $pic-color-two; 
+  background: $pic-color-two;
+}
+
+.bg-card-color {
+  background-color: rgba($pic-color-one, 0.2);
 }
