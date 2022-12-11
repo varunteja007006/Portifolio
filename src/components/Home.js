@@ -411,6 +411,10 @@ function Home() {
                           src={fit}
                           className="border border-3 border-dark rounded-2"
                         />
+                        <Card.Img
+                          src={fit}
+                          className="border border-3 border-dark rounded-2"
+                        />
                       </div>
                       <Card.Body>
                         <Card.Title>Fit App</Card.Title>
@@ -435,8 +439,14 @@ function Home() {
                           MERN stack application, React on the front end and on
                           the backend Node js and Express as middleware with
                           MongoDB database. Hosted this web app on{" "}
-                          <Badge bg="success">Heroku</Badge> (backend) &{" "}
-                          <Badge bg="success">Netlify</Badge> (frontend).
+                          <Badge pill bg="success">
+                            Heroku
+                          </Badge>{" "}
+                          (backend) &{" "}
+                          <Badge pill bg="success">
+                            Netlify
+                          </Badge>{" "}
+                          (frontend).
                         </div>
                         <a
                           href="https://github.com/varunteja007006/MERNstack"
@@ -647,7 +657,45 @@ function Home() {
                               HTML
                             </Badge>{" "}
                           </p>
-                          Update descriptions
+                          Budget is a{" "}
+                          <Badge pill bg="success">
+                            Django
+                          </Badge>{" "}
+                          based web app.{" "}
+                          <Badge pill bg="success">
+                            Bootstrap CSS
+                          </Badge>{" "}
+                          is used to design it as simple as possible. The most
+                          attractive part is how it displays various data that
+                          is analyzed by{" "}
+                          <Badge pill bg="success">
+                            Python
+                          </Badge>{" "}
+                          . Python libraries such as{" "}
+                          <Badge pill bg="success">
+                            Numpy
+                          </Badge>
+                          ,{" "}
+                          <Badge pill bg="success">
+                            Matplotlib
+                          </Badge>{" "}
+                          are used to display{" "}
+                          <Badge pill bg="success">
+                            dot graphs
+                          </Badge>
+                          ,{" "}
+                          <Badge pill bg="success">
+                            bar charts
+                          </Badge>
+                          ,{" "}
+                          <Badge pill bg="success">
+                            pie charts
+                          </Badge>
+                          , etc.. This data can also be downloaded in{" "}
+                          <Badge pill bg="success">
+                            .csv
+                          </Badge>{" "}
+                          format.
                         </div>
                         <a
                           href="https://github.com/varunteja007006/Budget"
@@ -803,7 +851,7 @@ function Home() {
                             Json server (localhost, port 8000). This was built
                             to learn{" "}
                             <Badge pill bg="success">
-                              SASS
+                              Bootstrap SASS
                             </Badge>{" "}
                             and{" "}
                             <Badge pill bg="success">
@@ -858,7 +906,15 @@ function Home() {
                             React Notes is a simple react project that I built
                             to learn the CRUD operations. It is simple project
                             that can be deployed on the Json server (localhost,
-                            port 8000).
+                            port 8000).{" "}
+                            <Badge pill bg="success">
+                              React
+                            </Badge>{" "}
+                            and{" "}
+                            <Badge pill bg="success">
+                              Bootstrap SASS
+                            </Badge>{" "}
+                            is used on the frontend.
                           </div>
                           <a
                             href="https://github.com/varunteja007006/react_notes"

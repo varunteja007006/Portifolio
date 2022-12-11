@@ -32,7 +32,7 @@ function Footer() {
             </p>
             <p className="mt-2">
               <a
-                href="https://www.linkedin.com"
+                href="www.linkedin.com/in/varun-teja-k-833522149"
                 target="_blank"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
@@ -42,7 +42,7 @@ function Footer() {
                 <i className="fa-brands fa-linkedin" alt=""></i>
               </a>
               <a
-                href="https://www.fb.com"
+                href="https://www.facebook.com/varun.teja.kp"
                 target="_blank"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
