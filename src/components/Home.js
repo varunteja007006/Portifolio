@@ -168,7 +168,13 @@ function Home() {
                         <b>Computer Science Engineering (B.Tech) </b>
                       </p>
                       <p className="m-0 p-0">8.6 CGPA</p>
-                      <p className="text-muted m-0 p-0">2017-2021</p>
+                      <p
+                        className={
+                          `m-0 p-0 ` + (theme === "-dark" ? " " : "text-muted")
+                        }
+                      >
+                        2017-2021
+                      </p>
                     </ListGroup.Item>
                     <ListGroup.Item
                       className={
@@ -191,7 +197,13 @@ function Home() {
                         <b>Intermediate - MPC</b>
                       </p>
                       <p className="m-0 p-0">95%</p>
-                      <p className="text-muted m-0 p-0">2017-2015</p>
+                      <p
+                        className={
+                          `m-0 p-0 ` + (theme === "-dark" ? " " : "text-muted")
+                        }
+                      >
+                        2017-2015
+                      </p>
                     </ListGroup.Item>
                     <ListGroup.Item
                       className={
@@ -213,7 +225,13 @@ function Home() {
                         <b>Secondary Education - 10th</b>
                       </p>
                       <p className="m-0 p-0">9.8 CGPA</p>
-                      <span className="text-muted m-0 p-0">2015</span>
+                      <span
+                        className={
+                          `m-0 p-0 ` + (theme === "-dark" ? " " : "text-muted")
+                        }
+                      >
+                        2015
+                      </span>
                     </ListGroup.Item>
                     <ListGroup.Item
                       className={

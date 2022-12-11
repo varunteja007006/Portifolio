@@ -8,10 +8,10 @@ import Navbar from "react-bootstrap/Navbar";
 import resume from "../assests/varun_resume_pic.pdf";
 import { useThemeContext } from "../hook/useThemeContext";
 
-function NavbarTop() {
+function Topnavbar() {
   const { theme, setTheme } = useThemeContext();
   const setlocal = () => {
-    localStorage.setItem("theme", (theme === "-light"? '-dark': '-light'));
+    localStorage.setItem("theme", theme === "-light" ? "-dark" : "-light");
   };
 
   return (
@@ -20,7 +20,7 @@ function NavbarTop() {
         id="navbartop"
         collapseOnSelect
         expand="lg"
-        className={`navbartop${theme}` + " " + `navbar${theme}`}
+        className={`navbartop${theme} navbar${theme}`}
       >
         <Container>
           <Navbar.Brand href="#Home">
@@ -75,4 +75,4 @@ function NavbarTop() {
   );
 }
 
-export default NavbarTop;
+export default Topnavbar;
