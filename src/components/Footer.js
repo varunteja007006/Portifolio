@@ -1,12 +1,15 @@
 import React from "react";
+import { useContext } from "react";
 import { Row, Col } from "react-bootstrap";
+import { useThemeContext } from "../hook/useThemeContext";
 
 function Footer() {
+  const { theme } = useThemeContext();
   return (
-    <div className="mt-3">
-      <footer className="p-3">
+    <div className={theme}>
+      <footer className="p-3 footer">
         <Row>
-          <Col>
+          <Col className="centering">
             <p className="mt-3">MyPortifolio - VARUN TEJA K</p>
             <p>
               <a

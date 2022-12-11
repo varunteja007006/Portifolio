@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "custom";
 
+//Custom colors
 $dark-blue: rgb(1, 0, 138);
 
 $pic-color-one: rgb(148, 213, 248);
@@ -8,11 +9,6 @@ $pic-color-two: rgba(232, 190, 76);
 $pic-color-three: rgb(251, 110, 0);
 
 $shadow-color-one: rgba(0, 0, 0, 0.05);
-
-$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
-$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
-$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
-$box-shadow-inset: inset 0 1px 2px rgba($black, 0.075);
 
 * {
   margin: 0;
@@ -53,46 +49,8 @@ a {
   text-decoration: none;
 }
 
-@mixin footer-common {
-  color: black;
-  font-weight: 600;
-}
-
-footer {
-  @include footer-common;
-  text-align: center;
-  background-color: rgba($pic-color-three, 0.6);
-  box-shadow: $box-shadow-lg;
-  .alignitems {
-    display: flex;
-    align-items: center;
-  }
-
-  a {
-    @include footer-common;
-    letter-spacing: 0.15rem;
-  }
-
-  p {
-    @include footer-common;
-    letter-spacing: 0.15rem;
-
-    &:hover {
-      cursor: pointer;
-      text-align: center;
-    }
-
-    i {
-      color: $dark-blue;
-      font-size: 1.5rem;
-      letter-spacing: 1rem;
-    }
-  }
-}
-
-.navbartop {
-  background-color: rgba($pic-color-one, 0.75);
-  box-shadow: $box-shadow;
+.brand-h1 {
+  letter-spacing: 0.2rem;
 }
 
 .centering {
@@ -114,57 +72,17 @@ footer {
   font-weight: 450;
 }
 
-.text-wrap {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.brand-h1 {
-  letter-spacing: 0.2rem;
-}
-
-@mixin btn-blue {
-  color: $dark-blue;
-  background-color: white;
-  border: 0.15rem solid $dark-blue;
-  font-weight: 500;
-}
-
-.send-btn {
-  @include btn-blue();
-}
-
-.theme-btn {
-  @include btn-blue();
-}
-
-.myimage {
-  border: 0.25rem solid white;
-  border-radius: 1rem;
-}
-
-.dropshadow {
-  border: 1rem;
-  box-shadow: inset 20px 20px 20px -15px rgba(0, 0, 0, 0.05),
-    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
-    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
-  transition: 0.5s ease-in-out;
-}
-
-.list-group-item {
+.bg-card-color {
   background-color: rgba($pic-color-one, 0.2);
 }
 
-.list-group-item-center {
-  @extend .text-justify;
+//My image design
+.myimage {
+  border: 0.25rem solid white; //light mode
+  border-radius: 1rem;
 }
 
-.list-group-item-center-shadow {
-  box-shadow: $box-shadow;
-}
-
-/* Scrollbar effect for project images */
+/* Scrollbar effect for project images and window */
 .card-img-size {
   padding: 0.5rem;
   height: 18rem;
@@ -193,6 +111,146 @@ footer {
   background: $pic-color-two;
 }
 
-.bg-card-color {
-  background-color: rgba($pic-color-one, 0.2);
+//custom shadow
+.dropshadow {
+  border: 1rem;
+  box-shadow: inset 20px 20px 20px -15px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+  transition: 0.5s ease-in-out;
+}
+
+//custom button design
+@mixin btn-blue {
+  border: 0.15rem solid $dark-blue; //light mode
+  background-color: white; //light mode
+  color: $dark-blue; //light mode
+  font-weight: 500;
+}
+
+.send-btn {
+  @include btn-blue();
+}
+
+.theme-btn {
+  @include btn-blue();
+  &:hover {
+    background-color: white;
+    color: $dark-blue;
+    border: 0.15rem solid $dark-blue;
+  }
+}
+
+//list group items custom
+.list-group-item {
+  background-color: rgba($pic-color-one, 0.2); //light mode
+}
+
+//LIGHT MODE DESIGN
+
+//Nav Bar Design
+.navbartop-light {
+  background-color: rgba($pic-color-one, 0.75); //light mode
+  box-shadow: $box-shadow;
+}
+
+.-light {
+  background-color: rgba($pic-color-two, 0.5); //light mode
+  color: black; //light mode
+  //mixin for footer
+  @mixin footer-common {
+    color: black; //light mode
+    font-weight: 600;
+  }
+  //footer design
+  footer {
+    @include footer-common;
+    text-align: center;
+    background-color: rgba($pic-color-three, 0.6); //light mode
+    box-shadow: $box-shadow-lg;
+    //align footer items to center
+    .alignitems {
+      display: flex;
+      align-items: center;
+    }
+    //footer anchor
+    a {
+      @include footer-common;
+      letter-spacing: 0.15rem;
+    }
+    //footer paragraph
+    p {
+      @include footer-common;
+      letter-spacing: 0.15rem;
+      //hover over paragraph
+      &:hover {
+        cursor: pointer;
+        text-align: center;
+      }
+      //icons
+      i {
+        color: $dark-blue; //light mode
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+      }
+    }
+  }
+}
+
+//DARK MODE DESIGN
+
+//Nav Bar Design
+.navbartop-dark {
+  background-color: black; //dark mode
+  color: white;
+  box-shadow: 0px -10px 22px -12px rgba(255, 255, 255, 0.51) inset;
+  -webkit-box-shadow: 0px -10px 22px -12px rgba(255, 255, 255, 0.51) inset;
+  -moz-box-shadow: 0px -10px 22px -12px rgba(255, 255, 255, 0.51) inset;
+}
+
+.-dark {
+  background-color: black;
+  color: white;
+  //dark mode
+  @mixin footer-common-dark {
+    color: white; //dark mode
+    font-weight: 600;
+  }
+  //Dark theme card
+  .grey-card {
+    background-color: $gray-700;
+    color: white;
+  }
+  //footer design
+  footer {
+    @include footer-common-dark;
+    text-align: center;
+    box-shadow: 0px 16px 22px -12px rgba(255, 255, 255, 0.51) inset;
+    -webkit-box-shadow: 0px 16px 22px -12px rgba(255, 255, 255, 0.51) inset;
+    -moz-box-shadow: 0px 16px 22px -12px rgba(255, 255, 255, 0.51) inset;
+    //align footer items to center
+    .alignitems {
+      display: flex;
+      align-items: center;
+    }
+    //footer anchor
+    a {
+      @include footer-common-dark;
+      letter-spacing: 0.15rem;
+    }
+    //footer paragraph
+    p {
+      @include footer-common-dark;
+      letter-spacing: 0.15rem;
+      //hover over paragraph
+      &:hover {
+        cursor: pointer;
+        text-align: center;
+      }
+      //icons
+      i {
+        color: white !important; //dark mode
+      }
+    }
+  }
 }
