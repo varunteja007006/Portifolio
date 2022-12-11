@@ -25,8 +25,10 @@ function Footer() {
               </a>
             </p>
             <p data-bs-toggle="tooltip" data-bs-placement="top" title="Call me">
-              <i className="fa-solid fa-phone small"></i>
-              7893798770
+              <span className="alignitems center">
+                <i className="fa-solid fa-phone"></i>
+                <span>7893798770</span>
+              </span>
             </p>
             <p className="mt-2">
               <a

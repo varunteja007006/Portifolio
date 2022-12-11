@@ -24,7 +24,7 @@ function Topnavbar() {
       >
         <Container>
           <Navbar.Brand href="#Home">
-            <h1 className="brand-h1 m-0 p-0">MyPortifolio</h1>
+            <h1 className={`m-0 p-0 brand-h1`+(theme ==="-dark"? `-dark`: ``)}>MyPortifolio</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -35,14 +35,13 @@ function Topnavbar() {
                 data-bs-toggle="tooltip"
                 data-bs-placement="bottom"
                 title="Click to download my resume"
-                className="btn btn-dark-blue send-btn me-3 shadow-sm"
+                className={`btn me-3 shadow-sm `+(theme === "-dark"? "send-btn-dark": "send-btn")}
                 download
               >
                 <i className="fa-solid fa-file-arrow-down"></i> Resume
               </a>
               <Button
-                variant="outline-dark-blue"
-                className="shadow-sm theme-btn"
+                className={`shadow-sm theme-btn `+(theme === "-dark"? "theme-btn-dark": "theme-btn")}
                 data-bs-toggle="tooltip"
                 data-bs-placement="bottom"
                 title="Click to change the theme"

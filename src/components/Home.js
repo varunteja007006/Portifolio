@@ -25,21 +25,8 @@ import sports_management from "../assests/sports_management.png";
 import { useThemeContext } from "../hook/useThemeContext";
 
 function Home() {
-  const [showMore, setShowMore] = useState("Show More...");
-  const [showLess, setShowLess] = useState(null);
   const [open, setOpen] = useState(false);
   const { theme } = useThemeContext();
-
-  const changeBtnStatus = () => {
-    if (showMore === "Show More...") {
-      setShowMore(null);
-      setShowLess("Show Less...");
-    }
-    if (showLess === "Show Less...") {
-      setShowMore("Show More...");
-      setShowLess(null);
-    }
-  };
 
   const refForm = useRef();
   const sendEmail = (e) => {
@@ -68,7 +55,8 @@ function Home() {
             <Col xs={12} md={8} lg={8} className="center">
               <Card
                 className={
-                  `p-2 ` + (theme === "-dark" ? "grey-card " : "dropshadow")
+                  `p-2 ` +
+                  (theme === "-dark" ? "main-card-dark " : "dropshadow")
                 }
               >
                 <Card.Body>
@@ -103,7 +91,8 @@ function Home() {
             <Col xs={12} md={8} lg={8} className="center m-0">
               <Card
                 className={
-                  `p-2 ` + (theme === "-dark" ? "grey-card " : "dropshadow")
+                  `p-2 ` +
+                  (theme === "-dark" ? "main-card-dark " : "dropshadow")
                 }
               >
                 <Card.Body>
@@ -152,7 +141,8 @@ function Home() {
             <Col xs={12} md={8} lg={8} className="center">
               <Card
                 className={
-                  `p-2 ` + (theme === "-dark" ? "grey-card " : "dropshadow")
+                  `p-2 ` +
+                  (theme === "-dark" ? "main-card-dark " : "dropshadow")
                 }
               >
                 <Card.Body>
@@ -254,7 +244,8 @@ function Home() {
               <Col xs={12} md={4} lg={4}>
                 <Card
                   className={
-                    `p-2 ` + (theme === "-dark" ? "grey-card " : "dropshadow")
+                    `p-2 ` +
+                    (theme === "-dark" ? "main-card-dark " : "dropshadow")
                   }
                 >
                   <Card.Body>
@@ -307,7 +298,8 @@ function Home() {
               <Col xs={12} md={4} lg={4}>
                 <Card
                   className={
-                    `p-2 ` + (theme === "-dark" ? "grey-card " : "dropshadow")
+                    `p-2 ` +
+                    (theme === "-dark" ? "main-card-dark " : "dropshadow")
                   }
                 >
                   <Card.Body>
@@ -330,7 +322,7 @@ function Home() {
                       </ListGroup.Item>
                       <ListGroup.Item
                         className={
-                          `"mt-1 text-justify shadow ` +
+                          `mt-1 text-justify shadow ` +
                           (theme === "-dark" ? "text-white" : " ")
                         }
                       >
@@ -361,12 +353,19 @@ function Home() {
               <Col xs={12} md={8} lg={8} className="center">
                 <Card
                   className={
-                    `p-2 ` + (theme === "-dark" ? "grey-card " : "dropshadow")
+                    `p-2 ` +
+                    (theme === "-dark" ? "main-card-dark " : "dropshadow")
                   }
                 >
                   <Card.Body>
                     <Card.Title>Projects</Card.Title>
-                    <Card className="border rounded-2 mt-2 mb-4 shadow bg-card-color">
+                    <Card
+                      className={
+                        theme === "-dark"
+                          ? `mb-4 mt-2 bg-card-color`
+                          : `border rounded-2 shadow mb-4 mt-2 bg-card-color`
+                      }
+                    >
                       <div className="m-1 p-2">
                         <Card.Img
                           src={sap}
@@ -400,7 +399,13 @@ function Home() {
                         </div>
                       </Card.Body>
                     </Card>
-                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <Card
+                      className={
+                        theme === "-dark"
+                          ? `mb-4 bg-card-color`
+                          : `border rounded-2 shadow mb-4 bg-card-color`
+                      }
+                    >
                       <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={fit}
@@ -439,7 +444,12 @@ function Home() {
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Github Link"
-                          className="btn btn-outline-dark-blue project-btn mt-2"
+                          className={
+                            `btn mt-2 ` +
+                            (theme === "-dark"
+                              ? "project-btn-dark"
+                              : "project-btn")
+                          }
                         >
                           <i className="fa-brands fa-github" alt=""></i>
                         </a>
@@ -449,13 +459,24 @@ function Home() {
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Launch Web App"
-                          className="btn btn-outline-dark-blue project-btn ms-3 mt-2"
+                          className={
+                            `btn mt-2 ms-3 ` +
+                            (theme === "-dark"
+                              ? "project-btn-dark"
+                              : "project-btn")
+                          }
                         >
                           <i className="fa-solid fa-up-right-from-square"></i>
                         </a>
                       </Card.Body>
                     </Card>
-                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <Card
+                      className={
+                        theme === "-dark"
+                          ? `mb-4 bg-card-color`
+                          : `border rounded-2 shadow mb-4 bg-card-color`
+                      }
+                    >
                       <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={sentiment_analysis}
@@ -515,13 +536,24 @@ function Home() {
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Github Link"
-                          className="btn btn-outline-dark-blue project-btn mt-2"
+                          className={
+                            `btn mt-2 ` +
+                            (theme === "-dark"
+                              ? "project-btn-dark"
+                              : "project-btn")
+                          }
                         >
                           <i className="fa-brands fa-github" alt=""></i>
                         </a>
                       </Card.Body>
                     </Card>
-                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <Card
+                      className={
+                        theme === "-dark"
+                          ? `mb-4 bg-card-color`
+                          : `border rounded-2 shadow mb-4 bg-card-color`
+                      }
+                    >
                       <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={sports_management}
@@ -577,13 +609,24 @@ function Home() {
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Github Link"
-                          className="btn btn-outline-dark-blue project-btn mt-2"
+                          className={
+                            `btn mt-2 ` +
+                            (theme === "-dark"
+                              ? "project-btn-dark"
+                              : "project-btn")
+                          }
                         >
                           <i className="fa-brands fa-github" alt=""></i>
                         </a>
                       </Card.Body>
                     </Card>
-                    <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                    <Card
+                      className={
+                        theme === "-dark"
+                          ? `mb-4 bg-card-color`
+                          : `border rounded-2 shadow mb-4 bg-card-color`
+                      }
+                    >
                       <div className="card-img-size mt-2 p-2">
                         <Card.Img
                           src={budget}
@@ -612,14 +655,25 @@ function Home() {
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Github Link"
-                          className="btn btn-outline-dark-blue project-btn mt-2"
+                          className={
+                            `btn mt-2 ` +
+                            (theme === "-dark"
+                              ? "project-btn-dark"
+                              : "project-btn")
+                          }
                         >
                           <i className="fa-brands fa-github" alt=""></i>
                         </a>
                       </Card.Body>
                     </Card>
                     <Collapse in={open}>
-                      <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <Card
+                        className={
+                          theme === "-dark"
+                            ? `mb-4 bg-card-color`
+                            : `border rounded-2 shadow mb-4 bg-card-color`
+                        }
+                      >
                         <div className="card-img-size mt-2 p-2">
                           <Card.Img
                             src={collabs}
@@ -648,7 +702,12 @@ function Home() {
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
                             title="Github Link"
-                            className="btn btn-outline-dark-blue project-btn mt-2"
+                            className={
+                              `btn mt-2 ` +
+                              (theme === "-dark"
+                                ? "project-btn-dark"
+                                : "project-btn")
+                            }
                           >
                             <i className="fa-brands fa-github" alt=""></i>
                           </a>
@@ -656,7 +715,13 @@ function Home() {
                       </Card>
                     </Collapse>
                     <Collapse in={open}>
-                      <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <Card
+                        className={
+                          theme === "-dark"
+                            ? `mb-4 bg-card-color`
+                            : `border rounded-2 shadow mb-4 bg-card-color`
+                        }
+                      >
                         <div className="card-img-size mt-2 p-2">
                           <Card.Img
                             src={portifolio}
@@ -682,7 +747,12 @@ function Home() {
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
                             title="Github Link"
-                            className="btn btn-outline-dark-blue project-btn mt-2"
+                            className={
+                              `btn mt-2 ` +
+                              (theme === "-dark"
+                                ? "project-btn-dark"
+                                : "project-btn")
+                            }
                           >
                             <i className="fa-brands fa-github" alt=""></i>
                           </a>
@@ -692,7 +762,12 @@ function Home() {
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
                             title="Launch Web App"
-                            className="btn btn-outline-dark-blue project-btn ms-3 mt-2"
+                            className={
+                              `btn mt-2 ms-3 ` +
+                              (theme === "-dark"
+                                ? "project-btn-dark"
+                                : "project-btn")
+                            }
                           >
                             <i className="fa-solid fa-up-right-from-square"></i>
                           </a>
@@ -700,7 +775,13 @@ function Home() {
                       </Card>
                     </Collapse>
                     <Collapse in={open}>
-                      <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <Card
+                        className={
+                          theme === "-dark"
+                            ? `mb-4 bg-card-color`
+                            : `border rounded-2 shadow mb-4 bg-card-color`
+                        }
+                      >
                         <div className="card-img-size mt-2 p-2">
                           <Card.Img
                             src={myblog}
@@ -718,8 +799,18 @@ function Home() {
                                 Bootstrap SASS
                               </Badge>{" "}
                             </p>
-                            Simple Blog is built on with React and data is saved
-                            on Json server (localhost, port 8000)
+                            Simple Blog is built on React and data is saved on
+                            Json server (localhost, port 8000). This was built
+                            to learn{" "}
+                            <Badge pill bg="success">
+                              SASS
+                            </Badge>{" "}
+                            and{" "}
+                            <Badge pill bg="success">
+                              React
+                            </Badge>
+                            . Most importantly it helped me to understand CRUD
+                            operations better.
                           </div>
                           <a
                             href="https://github.com/varunteja007006/Simple-Blog-React"
@@ -727,7 +818,12 @@ function Home() {
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
                             title="Github Link"
-                            className="btn btn-outline-dark-blue project-btn mt-2"
+                            className={
+                              `btn mt-2 ` +
+                              (theme === "-dark"
+                                ? "project-btn-dark"
+                                : "project-btn")
+                            }
                           >
                             <i className="fa-brands fa-github" alt=""></i>
                           </a>
@@ -735,7 +831,13 @@ function Home() {
                       </Card>
                     </Collapse>
                     <Collapse in={open}>
-                      <Card className="border rounded-2 mb-4 shadow bg-card-color">
+                      <Card
+                        className={
+                          theme === "-dark"
+                            ? `mb-4 bg-card-color`
+                            : `border rounded-2 shadow mb-4  bg-card-color`
+                        }
+                      >
                         <div className="card-img-size mt-2 p-2">
                           <Card.Img
                             src={simple_notes}
@@ -753,7 +855,10 @@ function Home() {
                                 Bootstrap SASS
                               </Badge>{" "}
                             </p>
-                            Update descriptions...
+                            React Notes is a simple react project that I built
+                            to learn the CRUD operations. It is simple project
+                            that can be deployed on the Json server (localhost,
+                            port 8000).
                           </div>
                           <a
                             href="https://github.com/varunteja007006/react_notes"
@@ -761,7 +866,12 @@ function Home() {
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
                             title="Github Link"
-                            className="btn btn-outline-dark-blue project-btn mt-2"
+                            className={
+                              `btn mt-2 ` +
+                              (theme === "-dark"
+                                ? "project-btn-dark"
+                                : "project-btn")
+                            }
                           >
                             <i className="fa-brands fa-github" alt=""></i>
                           </a>
@@ -771,15 +881,16 @@ function Home() {
                     <Button
                       onClick={() => {
                         setOpen(!open);
-                        changeBtnStatus();
                       }}
                       aria-controls="example-fade-text"
                       aria-expanded={open}
                       variant="outline-dark-blue"
-                      className="mt-3 send-btn shadow-sm"
+                      className={
+                        `mt-3 shadow-sm ` +
+                        (theme === "-dark" ? "send-btn-dark" : "send-btn")
+                      }
                     >
-                      {!showLess && "Show More"}
-                      {!showMore && "Show Less"}
+                      {open === true ? "Show less" : "Show more"}
                     </Button>
                   </Card.Body>
                 </Card>
@@ -789,7 +900,8 @@ function Home() {
               <Col xs={12} md={8} lg={8} className="center">
                 <Card
                   className={
-                    `p-2 ` + (theme === "-dark" ? "grey-card " : "dropshadow")
+                    `p-2 ` +
+                    (theme === "-dark" ? "main-card-dark " : "dropshadow")
                   }
                 >
                   <Card.Body>
@@ -873,7 +985,9 @@ function Home() {
           </h6>
           <Row className="g-3 justify-content-md-center">
             <Col xs={12} md={12} lg={12} className="center">
-              <Card className={theme === "-dark" ? "grey-card " : "dropshadow"}>
+              <Card
+                className={theme === "-dark" ? "main-card-dark " : "dropshadow"}
+              >
                 <Card.Body>
                   <form
                     ref={refForm}
@@ -908,8 +1022,10 @@ function Home() {
                       <Button
                         type="submit"
                         value="Send"
-                        className="ms-0 m-1 send-btn shadow"
-                        variant="outline-dark-blue"
+                        className={
+                          `ms-0 m-1 shadow ` +
+                          (theme === "-dark" ? "send-btn-dark" : "send-btn")
+                        }
                       >
                         Send
                       </Button>
