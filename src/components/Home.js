@@ -121,8 +121,7 @@ function Home() {
                       <p className="m-0 p-0">Tata Consultancy Services</p>
                       <p
                         className={
-                          `m-1 p-0 ` +
-                          (theme === "-dark" ? " " : "text-muted")
+                          `m-1 p-0 ` + (theme === "-dark" ? " " : "text-muted")
                         }
                       >
                         2021 - Present
@@ -159,7 +158,12 @@ function Home() {
                 <Card.Body>
                   <Card.Title>Academics</Card.Title>
                   <ListGroup horizontal className="shadow card-text">
-                    <ListGroup.Item variant=" " className="w-50 centering">
+                    <ListGroup.Item
+                      className={
+                        `w-50 centering ` +
+                        (theme === "-dark" ? "text-white" : " ")
+                      }
+                    >
                       <p className="m-0 p-0">
                         <b>Computer Science Engineering (B.Tech) </b>
                       </p>
@@ -167,15 +171,22 @@ function Home() {
                       <p className="text-muted m-0 p-0">2017-2021</p>
                     </ListGroup.Item>
                     <ListGroup.Item
-                      variant=" "
-                      className="text-justify w-50 centering"
+                      className={
+                        `text-justify w-50 centering ` +
+                        (theme === "-dark" ? "text-white" : " ")
+                      }
                     >
                       Vel Tech R&D Institute of Science & Technology, Deemed to
                       be a University
                     </ListGroup.Item>
                   </ListGroup>
                   <ListGroup horizontal className="mt-1 shadow card-text">
-                    <ListGroup.Item variant=" " className="w-50 centering">
+                    <ListGroup.Item
+                      className={
+                        `w-50 centering ` +
+                        (theme === "-dark" ? "text-white" : " ")
+                      }
+                    >
                       <p className="m-0 p-0">
                         <b>Intermediate - MPC</b>
                       </p>
@@ -183,14 +194,21 @@ function Home() {
                       <p className="text-muted m-0 p-0">2017-2015</p>
                     </ListGroup.Item>
                     <ListGroup.Item
-                      variant=" "
-                      className="text-justify w-50 centering"
+                      className={
+                        `text-justify w-50 centering ` +
+                        (theme === "-dark" ? "text-white" : " ")
+                      }
                     >
                       Narayana Junior College
                     </ListGroup.Item>
                   </ListGroup>
                   <ListGroup horizontal className="mt-1 shadow card-text">
-                    <ListGroup.Item variant=" " className="w-50 centering">
+                    <ListGroup.Item
+                      className={
+                        `w-50 centering ` +
+                        (theme === "-dark" ? "text-white" : " ")
+                      }
+                    >
                       <p className="m-0 p-0">
                         <b>Secondary Education - 10th</b>
                       </p>
@@ -198,8 +216,10 @@ function Home() {
                       <span className="text-muted m-0 p-0">2015</span>
                     </ListGroup.Item>
                     <ListGroup.Item
-                      variant=" "
-                      className="text-justify w-50 centering"
+                      className={
+                        `text-justify w-50 centering ` +
+                        (theme === "-dark" ? "text-white" : " ")
+                      }
                     >
                       The Bodhi School
                     </ListGroup.Item>
@@ -222,19 +242,44 @@ function Home() {
                   <Card.Body>
                     <Card.Title>Industry Skills</Card.Title>
                     <ListGroup variant="flush">
-                      <ListGroup.Item variant=" " className="shadow card-text">
+                      <ListGroup.Item
+                        className={
+                          `shadow card-text ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Object Oriented Programming System
                       </ListGroup.Item>
-                      <ListGroup.Item variant=" " className="mt-1 shadow">
+                      <ListGroup.Item
+                        className={
+                          `mt-1 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Database Management System
                       </ListGroup.Item>
-                      <ListGroup.Item variant=" " className="mt-1 shadow">
+                      <ListGroup.Item
+                        className={
+                          `mt-1 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Software Development and Life Cycle
                       </ListGroup.Item>
-                      <ListGroup.Item variant=" " className="mt-1 shadow">
+                      <ListGroup.Item
+                        className={
+                          `mt-1 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Data Structures and Algorithms
                       </ListGroup.Item>
-                      <ListGroup.Item variant=" " className="mt-1 shadow">
+                      <ListGroup.Item
+                        className={
+                          `mt-1 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Problem Solving
                       </ListGroup.Item>
                     </ListGroup>
@@ -250,24 +295,42 @@ function Home() {
                   <Card.Body>
                     <Card.Title>Technical Skills</Card.Title>
                     <ListGroup variant="flush card-text">
-                      <ListGroup.Item variant=" " className="shadow">
+                      <ListGroup.Item
+                        className={
+                          `shadow ` + (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Linux/ Windows
                       </ListGroup.Item>
-                      <ListGroup.Item variant=" " className="mt-1 shadow">
+                      <ListGroup.Item
+                        className={
+                          `mt-1 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         MySQL, Mongo DB
                       </ListGroup.Item>
                       <ListGroup.Item
-                        variant=" "
-                        className="mt-1 text-justify shadow"
+                        className={
+                          `"mt-1 text-justify shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
                       >
                         Python, HTML, CSS, JavaScript, React, PHP
                       </ListGroup.Item>
-                      <ListGroup.Item variant=" " className="mt-1 shadow">
+                      <ListGroup.Item
+                        className={
+                          `mt-1 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         MERN, Django
                       </ListGroup.Item>
                       <ListGroup.Item
-                        variant=" "
-                        className="mt-1 text-justify shadow"
+                        className={
+                          `mt-1 text-justify shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
                       >
                         Git, VS code, Postman, TortoiseSVN, Jenkins, Heroku
                       </ListGroup.Item>
@@ -296,7 +359,12 @@ function Home() {
                       <Card.Body>
                         <Card.Title>SAP SuccessFactors EC & PMGM</Card.Title>
                         <div className="text-justify card-text">
-                          <p className="text-muted center">
+                          <p
+                            className={
+                              `m-1 p-0 ` +
+                              (theme === "-dark" ? "center" : "text-muted")
+                            }
+                          >
                             Tata Consultancy Services
                           </p>
                           <ul>
@@ -709,21 +777,69 @@ function Home() {
                   <Card.Body>
                     <Card.Title>Certifications</Card.Title>
                     <ListGroup variant="flush" className="center card-text">
-                      <ListGroup.Item className="w-100 shadow">
+                      <ListGroup.Item
+                        className={
+                          `w-100 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Building Web Applications in PHP
-                        <p className="text-muted m-0">- Coursera</p>
+                        <p
+                          className={
+                            `m-1 p-0 ` +
+                            (theme === "-dark" ? " " : "text-muted")
+                          }
+                        >
+                          - Coursera
+                        </p>
                       </ListGroup.Item>
-                      <ListGroup.Item className="w-100 mt-2 shadow">
+                      <ListGroup.Item
+                        className={
+                          `w-100 mt-2 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Introduction to Machine Learning
-                        <p className="text-muted m-0">- Coursera</p>
+                        <p
+                          className={
+                            `m-1 p-0 ` +
+                            (theme === "-dark" ? " " : "text-muted")
+                          }
+                        >
+                          - Coursera
+                        </p>
                       </ListGroup.Item>
-                      <ListGroup.Item className="w-100 mt-2 shadow">
+                      <ListGroup.Item
+                        className={
+                          `w-100 mt-2 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         PCAP Programming Essentials in Python
-                        <p className="text-muted m-0">- Cisco</p>
+                        <p
+                          className={
+                            `m-1 p-0 ` +
+                            (theme === "-dark" ? " " : "text-muted")
+                          }
+                        >
+                          - Cisco
+                        </p>
                       </ListGroup.Item>
-                      <ListGroup.Item className="w-100 mt-2 shadow">
+                      <ListGroup.Item
+                        className={
+                          `w-100 mt-2 shadow ` +
+                          (theme === "-dark" ? "text-white" : " ")
+                        }
+                      >
                         Introduction of JavaScript
-                        <p className="text-muted m-0 ">- Great Learning</p>
+                        <p
+                          className={
+                            `m-1 p-0 ` +
+                            (theme === "-dark" ? " " : "text-muted")
+                          }
+                        >
+                          - Great Learning
+                        </p>
                       </ListGroup.Item>
                     </ListGroup>
                   </Card.Body>

@@ -134,11 +134,6 @@ a {
 
 .theme-btn {
   @include btn-blue();
-  &:hover {
-    background-color: white;
-    color: $dark-blue;
-    border: 0.15rem solid $dark-blue;
-  }
 }
 
 //list group items custom
