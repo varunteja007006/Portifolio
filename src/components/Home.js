@@ -742,7 +742,18 @@ function Home() {
                                 HTML
                               </Badge>{" "}
                             </p>
-                            Update descriptions...
+                            Collabs is built as a college collaboration tool.
+                            Users can login and post their skills and projects.
+                            It will help other interested parties to contact you
+                            for collaboration. It is built on{" "}
+                            <Badge pill bg="success">
+                              Django
+                            </Badge>
+                            .{"  "}
+                            <Badge pill bg="success">
+                              Materialize CSS
+                            </Badge>{" "}
+                            is used to style the website.
                           </div>
                           <a
                             href="https://github.com/varunteja007006/collabs_WebApp_Django"
@@ -800,7 +811,9 @@ function Home() {
                             that submits your form which is then mailed to me by{" "}
                             <Badge pill bg="success">
                               Email Js
-                            </Badge>{" "}. This website is can be viewed in dark mode as well.
+                            </Badge>{" "}
+                            . This website is can be viewed in dark mode as
+                            well.
                           </div>
                           <a
                             href="https://github.com/varunteja007006/Portifolio"
