@@ -24,7 +24,7 @@ function Topnavbar() {
       >
         <Container>
           <Navbar.Brand href="#Home">
-            <h1 className={`m-0 p-0 brand-h1`+(theme ==="-dark"? `-dark`: ``)}>MyPortifolio</h1>
+            <h1 className={`m-0 p-0 brand-h1`+(theme ==="-dark"? `-dark`: ``)}>My Portifolio</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

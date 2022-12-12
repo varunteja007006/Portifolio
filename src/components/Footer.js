@@ -10,7 +10,7 @@ function Footer() {
       <footer className="p-3 footer">
         <Row>
           <Col className="centering">
-            <p className="mt-3">MyPortifolio - VARUN TEJA K</p>
+            <p className="mt-3">My Portifolio - VARUN TEJA K</p>
             <p>
               <a
                 href="mailto:varunteja007006@gmail.com"

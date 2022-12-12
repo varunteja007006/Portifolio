@@ -33,6 +33,8 @@ html {
 body {
   min-height: 100vh;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -45,7 +47,57 @@ p {
   text-decoration: none;
 }
 
+@mixin fadein-effect($seconds){
+  animation: fadeIn $seconds;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 main {
+  @include fadein-effect(5s);
   position: relative;
   div {
     position: relative;
@@ -75,7 +127,7 @@ a {
   font-weight: 450;
 }
 
-.badge{
+.badge {
   font-size: 0.9rem;
   margin: 0.2rem 0;
   padding: 0.5rem;
@@ -181,6 +233,7 @@ a {
 
 //Nav Bar Design
 .navbartop-light {
+  @include fadein-effect(3s);
   background-color: rgba($pic-color-one, 0.75); //light mode
   box-shadow: $box-shadow;
 }
@@ -191,6 +244,7 @@ a {
   //footer design
   footer {
     @include footer-common;
+    @include fadein-effect(7s);
     text-align: center;
     background-color: rgba($pic-color-three, 0.6); //light mode
     box-shadow: $box-shadow-lg;
@@ -258,6 +312,7 @@ a {
 }
 //Nav Bar Design
 .navbartop-dark {
+  @include fadein-effect(3s);
   background-color: $nav-bar-dark-color; //dark mode
   color: white;
 }
@@ -277,6 +332,7 @@ a {
   }
   footer {
     @include footer-common-dark;
+    @include fadein-effect(7s);
     background-color: $nav-bar-dark-color; //dark mode
     text-align: center;
     //align footer items to center

@@ -1,9 +1,7 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import {
   Button,
   Col,
-  Form,
   Row,
   Card,
   ListGroup,
@@ -16,228 +14,30 @@ import budget from "../assests/budget.png";
 import collabs from "../assests/collabs.png";
 import fit from "../assests/fit.png";
 import myblog from "../assests/myblog.png";
-import myImage from "../assests/myImage.jpeg";
 import portifolio from "../assests/portifolio.png";
 import sap from "../assests/sap_2.jpg";
 import sentiment_analysis from "../assests/sentiment_analysis.png";
 import simple_notes from "../assests/simple_notes.png";
 import sports_management from "../assests/sports_management.png";
 import { useThemeContext } from "../hook/useThemeContext";
+import Intro from "./Intro";
+import Contactme from "./Contactme";
+import Aboutme from "./Aboutme";
 
 function Home() {
   const [open, setOpen] = useState(false);
   const { theme } = useThemeContext();
-
-  const refForm = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_awp39hr",
-        "template_cen9b4d",
-        refForm.current,
-        "w1IIVhZfu4I7kN4tr"
-      )
-      .then(
-        () => {
-          window.location.reload(false);
-        },
-        () => {
-          alert("Failed to send the message, please try again");
-        }
-      );
-  };
   return (
-    <main className={`pb-4` + ` ` + `${theme}`}>
+    <main className={`pb-4 ` + `${theme}`}>
       <Container className="pt-3">
-        <section id="Home" className="mt-4 mb-5">
-          <Row className="g-4 justify-content-md-center">
-            <Col xs={12} md={8} lg={8} className="center">
-              <Card
-                className={
-                  `p-2 ` +
-                  (theme === "-dark" ? "main-card-dark " : "dropshadow")
-                }
-              >
-                <Card.Body>
-                  <Row className="g-4 justify-content-md-center">
-                    <Col xs={12} md={8} lg={8}>
-                      <h3 className="card-title">VARUN TEJA K</h3>
-                      <p className="mb-1">Full Stack Developer</p>
-                      <Card.Text className="text-justify">
-                        I am a computer science engineer with problem-solving
-                        skills to solve challenges in the workplace. I love to
-                        explore, research, and learn about new and popular
-                        technologies. I am looking for an opportunity to apply
-                        my skills to develop services and solutions.
-                      </Card.Text>
-                    </Col>
-                    <Col xs={12} md={4} lg={4}>
-                      <img
-                        src={myImage}
-                        alt=""
-                        className="w-100 myimage shadow-lg"
-                      />
-                    </Col>
-                  </Row>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+        <section id="Home" className="Home mt-4 mb-5">
+          <Intro></Intro>
         </section>
-        <section id="About" className="centering mt-4 mb-5">
+        <section id="About" className="About centering mt-4 mb-5">
           <h3>About Me</h3>
-          <Row className="g-4 justify-content-md-center m-0">
-            <Col xs={12} md={8} lg={8} className="center m-0">
-              <Card
-                className={
-                  `p-2 ` +
-                  (theme === "-dark" ? "main-card-dark " : "dropshadow")
-                }
-              >
-                <Card.Body>
-                  <Card.Title>Work Experience</Card.Title>
-                  <ListGroup horizontal className="shadow card-text">
-                    <ListGroup.Item
-                      className={
-                        `w-50 centering ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      <p className="m-0 p-0">
-                        <b> SAP SuccessFactors Consultant</b>
-                      </p>{" "}
-                      <p className="m-0 p-0">Tata Consultancy Services</p>
-                      <p
-                        className={
-                          `m-1 p-0 ` + (theme === "-dark" ? " " : "text-muted")
-                        }
-                      >
-                        2021 - Present
-                      </p>
-                    </ListGroup.Item>
-                    <ListGroup.Item
-                      className={
-                        `text-justify w-50 ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      <ul>
-                        <li>
-                          Supporting and Testing SAP Successfactors EC and PMGM
-                          modules.
-                        </li>
-                        <li className="mt-2">
-                          Updating and Providing enhancements to
-                          clients/customers that will increase their
-                          productivity and interoperability
-                        </li>
-                      </ul>
-                    </ListGroup.Item>
-                  </ListGroup>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={12} md={8} lg={8} className="center">
-              <Card
-                className={
-                  `p-2 ` +
-                  (theme === "-dark" ? "main-card-dark " : "dropshadow")
-                }
-              >
-                <Card.Body>
-                  <Card.Title>Academics</Card.Title>
-                  <ListGroup horizontal className="shadow card-text">
-                    <ListGroup.Item
-                      className={
-                        `w-50 centering ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      <p className="m-0 p-0">
-                        <b>Computer Science Engineering (B.Tech) </b>
-                      </p>
-                      <p className="m-0 p-0">8.6 CGPA</p>
-                      <p
-                        className={
-                          `m-0 p-0 ` + (theme === "-dark" ? " " : "text-muted")
-                        }
-                      >
-                        2017-2021
-                      </p>
-                    </ListGroup.Item>
-                    <ListGroup.Item
-                      className={
-                        `text-justify w-50 centering ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      Vel Tech R&D Institute of Science & Technology, Deemed to
-                      be a University
-                    </ListGroup.Item>
-                  </ListGroup>
-                  <ListGroup horizontal className="mt-1 shadow card-text">
-                    <ListGroup.Item
-                      className={
-                        `w-50 centering ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      <p className="m-0 p-0">
-                        <b>Intermediate - MPC</b>
-                      </p>
-                      <p className="m-0 p-0">95%</p>
-                      <p
-                        className={
-                          `m-0 p-0 ` + (theme === "-dark" ? " " : "text-muted")
-                        }
-                      >
-                        2017-2015
-                      </p>
-                    </ListGroup.Item>
-                    <ListGroup.Item
-                      className={
-                        `text-justify w-50 centering ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      Narayana Junior College
-                    </ListGroup.Item>
-                  </ListGroup>
-                  <ListGroup horizontal className="mt-1 shadow card-text">
-                    <ListGroup.Item
-                      className={
-                        `w-50 centering ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      <p className="m-0 p-0">
-                        <b>Secondary Education - 10th</b>
-                      </p>
-                      <p className="m-0 p-0">9.8 CGPA</p>
-                      <span
-                        className={
-                          `m-0 p-0 ` + (theme === "-dark" ? " " : "text-muted")
-                        }
-                      >
-                        2015
-                      </span>
-                    </ListGroup.Item>
-                    <ListGroup.Item
-                      className={
-                        `text-justify w-50 centering ` +
-                        (theme === "-dark" ? "text-white" : " ")
-                      }
-                    >
-                      The Bodhi School
-                    </ListGroup.Item>
-                  </ListGroup>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+          <Aboutme></Aboutme>
         </section>
-        <section id="Skills" className="centering mt-3 mb-5">
+        <section id="Skills" className="Skills centering mt-3 mb-5">
           <h3>Skills</h3>
           <Row className="g-3 justify-content-md-center">
             <Row className="g-3 justify-content-md-center">
@@ -1060,63 +860,9 @@ function Home() {
             </Row>
           </Row>
         </section>
-        <section id="Contact" className="centering mt-4">
+        <section id="Contact" className="Contact centering mt-4">
           <h3>Contact Me</h3>
-          <h6 className="text-muted">
-            You can contact me or share your feedback by filling the form below
-          </h6>
-          <Row className="g-3 justify-content-md-center">
-            <Col xs={12} md={12} lg={12} className="center">
-              <Card
-                className={theme === "-dark" ? "main-card-dark " : "dropshadow"}
-              >
-                <Card.Body>
-                  <form
-                    ref={refForm}
-                    onSubmit={sendEmail}
-                    className="contact-form"
-                  >
-                    <Form.Control
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      required
-                      className="ms-0 m-1"
-                    />
-                    <Form.Control
-                      type="email"
-                      name="email"
-                      placeholder="Your Email Address"
-                      className="ms-0 m-1"
-                      required
-                    />
-                    <Form.Control
-                      as="textarea"
-                      name="message"
-                      id="message"
-                      cols="30"
-                      rows="5"
-                      placeholder="Message"
-                      className="ms-0 m-1"
-                      required
-                    ></Form.Control>
-                    <div className="center">
-                      <Button
-                        type="submit"
-                        value="Send"
-                        className={
-                          `ms-0 m-1 shadow ` +
-                          (theme === "-dark" ? "send-btn-dark" : "send-btn")
-                        }
-                      >
-                        Send
-                      </Button>
-                    </div>
-                  </form>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+          <Contactme></Contactme>
         </section>
       </Container>
     </main>
