@@ -60,7 +60,7 @@ function Footer() {
                 <i className="fa-brands fa-github" alt=""></i>
               </a>
               <a
-                href="google.com"
+                href="https://www.google.com"
                 target="_blank"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"

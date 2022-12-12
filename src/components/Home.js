@@ -787,7 +787,20 @@ function Home() {
                                 Bootstrap SASS
                               </Badge>{" "}
                             </p>
-                            A simple portifolio website built on react.
+                            This Portifolio website is a resume to show my
+                            skills and qualifications.{" "}
+                            <Badge pill bg="success">
+                              React
+                            </Badge>{" "}
+                            and{" "}
+                            <Badge pill bg="success">
+                              Bootstrap SASS
+                            </Badge>{" "}
+                            is used. Elegantly built and also has a contact form
+                            that submits your form which is then mailed to me by{" "}
+                            <Badge pill bg="success">
+                              Email Js
+                            </Badge>{" "}. This website is can be viewed in dark mode as well.
                           </div>
                           <a
                             href="https://github.com/varunteja007006/Portifolio"
@@ -844,14 +857,14 @@ function Home() {
                                 React
                               </Badge>{" "}
                               <Badge pill bg="warning" text="dark">
-                                Bootstrap SASS
+                                SASS
                               </Badge>{" "}
                             </p>
                             Simple Blog is built on React and data is saved on
                             Json server (localhost, port 8000). This was built
                             to learn{" "}
                             <Badge pill bg="success">
-                              Bootstrap SASS
+                              SASS
                             </Badge>{" "}
                             and{" "}
                             <Badge pill bg="success">
@@ -952,7 +965,7 @@ function Home() {
                 </Card>
               </Col>
             </Row>
-            <Row className="g-3 justify-content-md-center">
+            <Row className="g-3 justify-content-md-center pt-3">
               <Col xs={12} md={8} lg={8} className="center">
                 <Card
                   className={
@@ -1037,7 +1050,7 @@ function Home() {
         <section id="Contact" className="centering mt-4">
           <h3>Contact Me</h3>
           <h6 className="text-muted">
-            You can contact me by filling the form below
+            You can contact me or share your feedback by filling the form below
           </h6>
           <Row className="g-3 justify-content-md-center">
             <Col xs={12} md={12} lg={12} className="center">
