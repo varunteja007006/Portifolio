@@ -47,7 +47,7 @@ p {
   text-decoration: none;
 }
 
-@mixin fadein-effect($seconds){
+@mixin fadein-effect($seconds) {
   animation: fadeIn $seconds;
 }
 
@@ -191,6 +191,25 @@ a {
 //list group items custom
 .list-group-item {
   background-color: rgba($pic-color-one, 0.2); //light mode
+}
+
+.scroll-to-top-btn {
+  display: none;
+  background-color: $pic-color-three;
+  color: black;
+  font-weight: 600;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  z-index: 99;
+  cursor: pointer;
+  a{
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: $pic-color-two;
+    font-weight: 600;
+  }
 }
 
 //LIGHT MODE DESIGN

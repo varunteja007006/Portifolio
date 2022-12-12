@@ -1,25 +1,16 @@
 * Add aria labels and other stuff to improve the accessibility
 aria-label="open"
 
-* colors to user 
--blue
--green
--purple
--red
--orange
-
 * site name - beautiful-meerkat-18a36f
 
 * Google Presentation
-
-* Button to scroll-to-top
 
 * side nav or quick scroll
 
 
 Email JS - add tokens in .env file
 index file 
-
+Contactme.js file
 
 Projects
 -SAP PMGM and EC - TCS 

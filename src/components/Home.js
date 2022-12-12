@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   Button,
   Col,
@@ -19,14 +20,34 @@ import sap from "../assests/sap_2.jpg";
 import sentiment_analysis from "../assests/sentiment_analysis.png";
 import simple_notes from "../assests/simple_notes.png";
 import sports_management from "../assests/sports_management.png";
+
 import { useThemeContext } from "../hook/useThemeContext";
+
 import Intro from "./Intro";
 import Contactme from "./Contactme";
 import Aboutme from "./Aboutme";
+import Sidebar from "./Sidebar";
 
 function Home() {
   const [open, setOpen] = useState(false);
   const { theme } = useThemeContext();
+  // Get the button:
+  let mybutton = document.getElementById("scrolltopbtn");
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
+  };
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
   return (
     <main className={`pb-4 ` + `${theme}`}>
       <Container className="pt-3">
@@ -864,6 +885,27 @@ function Home() {
           <h3>Contact Me</h3>
           <Contactme></Contactme>
         </section>
+        {/* Scroll to top button*/}
+        <a
+          id="scrolltopbtn"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          title="Click to scroll to top"
+          className={
+            `btn btn-lg scroll-to-top-btn shadow rounded-circle border-3 border-` +
+            (theme === "-dark" ? "light" : "dark")
+          }
+          href="#navbartop"
+        >
+          <i
+            className={
+              `fa-solid fa-up-long ` +
+              (theme === "-dark" ? "text-light" : "text-dark")
+            }
+          ></i>
+        </a>
+        {/* side navigation*/}
+        <Sidebar></Sidebar>
       </Container>
     </main>
   );
