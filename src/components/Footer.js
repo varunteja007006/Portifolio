@@ -59,6 +59,7 @@ function Footer() {
               >
                 <i className="fa-brands fa-github" alt=""></i>
               </a>
+              {/* 
               <a
                 href="https://www.google.com"
                 target="_blank"
@@ -67,7 +68,7 @@ function Footer() {
                 title="Google - Present"
               >
                 <i className="fa-solid fa-file-powerpoint" alt=""></i>
-              </a>
+              </a>*/}
             </p>
           </Col>
         </Row>
