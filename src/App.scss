@@ -236,9 +236,9 @@ a {
   button {
     background-color: rgba($pic-color-one, 0.75); //light mode
     font-weight: 600;
-    &:hover {
+    /*&:hover {
       background-color: rgba($pic-color-three, 0.5);
-    }
+    }*/
   }
 }
 
@@ -335,12 +335,12 @@ a {
 //dark mode side theme button
 .sideThemebtn-dark {
   @include sideThemebtn-common();
-
   button {
     background-color: $nav-bar-dark-color; //dark mode
+    /*
     &:hover {
       background-color: $grey-blue;
-    }
+    }*/
   }
 }
 
