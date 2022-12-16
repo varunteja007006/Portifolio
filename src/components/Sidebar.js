@@ -38,7 +38,7 @@ function Sidebar() {
           id="scrolltopbtn"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          title="Click to scroll to navigation bar"
+          title="Scroll to navigation bar"
           className={
             `btn shadow border-3 border-` +
             (theme === "-dark" ? "light text-light" : "dark text-dark")
@@ -57,7 +57,7 @@ function Sidebar() {
           id="scrolltopbtn"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          title="Click to scroll to navigation bar"
+          title="Scroll to see My Intro..."
           className={
             `btn shadow border-3 border-` +
             (theme === "-dark" ? "light text-light" : "dark text-dark")
@@ -70,7 +70,7 @@ function Sidebar() {
           id="scrolltopbtn"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          title="Click to scroll to navigation bar"
+          title="Scroll to know About Me.."
           className={
             `btn shadow border-3 border-` +
             (theme === "-dark" ? "light text-light" : "dark text-dark")
@@ -83,7 +83,7 @@ function Sidebar() {
           id="scrolltopbtn"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          title="Click to scroll to navigation bar"
+          title="Scroll to check my Skills..."
           className={
             `btn shadow border-3 border-` +
             (theme === "-dark" ? "light text-light" : "dark text-dark")
@@ -96,7 +96,7 @@ function Sidebar() {
           id="scrolltopbtn"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          title="Click to scroll to navigation bar"
+          title="Scroll to leave me a message..."
           className={
             `btn shadow border-3 border-` +
             (theme === "-dark" ? "light text-light" : "dark text-dark")
