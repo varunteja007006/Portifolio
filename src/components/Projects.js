@@ -43,7 +43,9 @@ import sports_management_8 from "../assests/sports_management/sports_management_
 import sports_management_9 from "../assests/sports_management/sports_management_9.png";
 
 
-import portifolio from "../assests/portifolio.png";
+import portifolio from "../assests/portifolio/portifolio.png";
+import portifolio_1 from "../assests/portifolio/portifolio_1.png";
+
 import sap from "../assests/sap.jpg";
 
 import simple_notes from "../assests/simple_notes.png";
@@ -473,11 +475,9 @@ function Projects() {
                   : `border rounded-2 shadow mb-4 bg-card-color`
               }
             >
-              <div className="card-img-size mt-2 p-2">
-                <Card.Img
-                  src={portifolio}
-                  className="border border-3 border-dark rounded-2"
-                />
+              <div className="card-img-size m-2 p-0 border border-2 rounded-top border-dark">
+                <Card.Img src={portifolio} className="rounded-0" />
+                <Card.Img src={portifolio_1} className="rounded-0" />
               </div>
               <Card.Body>
                 <Card.Title>Portifolio</Card.Title>
