@@ -3,6 +3,7 @@
 
 //Custom colors
 $dark-blue: rgb(1, 1, 100);
+$grey-blue: rgb(87, 133, 156);
 
 //light mode colors
 $pic-color-one: rgb(148, 213, 248);
@@ -152,8 +153,7 @@ a {
 
 /* Scrollbar effect for project images and window */
 .card-img-size {
-  padding: 0.5rem;
-  height: 18rem;
+  height: 40vh;
   overflow: auto;
 }
 
@@ -193,32 +193,55 @@ a {
   background-color: rgba($pic-color-one, 0.2); //light mode
 }
 
-.scroll-to-top-btn {
+@mixin sideBar-common {
   display: none;
-  background-color: $pic-color-three;
-  color: black;
-  font-weight: 600;
+  width: 10rem;
   position: fixed;
-  bottom: 3%;
-  right: 2%;
+  bottom: 40%;
+  right: 1%;
   z-index: 99;
-  cursor: pointer;
-  a{
-    text-decoration: none;
-  }
-  &:hover {
-    background-color: $pic-color-two;
-    font-weight: 600;
-  }
 }
-
+@mixin sideThemebtn-common {
+  display: none;
+  width: 10rem;
+  position: fixed;
+  bottom: 20%;
+  right: 1%;
+  z-index: 99;
+}
 //LIGHT MODE DESIGN
 
 //Brand name
 .brand-h1 {
-  color: $dark-blue;
+  color: $dark-blue; //light mode
   letter-spacing: 0.2rem;
 }
+
+//light mode side bar
+.sideBar-light {
+  @include sideBar-common();
+
+  a {
+    background-color: rgba($pic-color-one, 0.75); //light mode
+    font-weight: 600;
+    &:hover {
+      background-color: rgba($pic-color-three, 0.5);
+    }
+  }
+}
+//light mode side theme button
+.sideThemebtn-light {
+  @include sideThemebtn-common();
+
+  button {
+    background-color: rgba($pic-color-one, 0.75); //light mode
+    font-weight: 600;
+    &:hover {
+      background-color: rgba($pic-color-three, 0.5);
+    }
+  }
+}
+
 //custom button design
 @mixin btn-blue {
   border: 0.15rem solid $dark-blue; //light mode
@@ -227,7 +250,7 @@ a {
   font-weight: 500;
   &:hover {
     background-color: $dark-blue; //light mode
-    color: white;
+    color: white; //light mode
     transition: ease-in 0.4s;
     font-weight: 500;
   }
@@ -298,21 +321,44 @@ a {
 
 //DARK MODE DESIGN
 
+//dark mode side bar
+.sideBar-dark {
+  @include sideBar-common();
+
+  a {
+    background-color: $nav-bar-dark-color; //dark mode
+    &:hover {
+      background-color: $grey-blue;
+    }
+  }
+}
+//dark mode side theme button
+.sideThemebtn-dark {
+  @include sideThemebtn-common();
+
+  button {
+    background-color: $nav-bar-dark-color; //dark mode
+    &:hover {
+      background-color: $grey-blue;
+    }
+  }
+}
+
 //Brand name
 .brand-h1-dark {
-  color: white;
+  color: white; //dark mode
   letter-spacing: 0.2rem;
 }
 //custom dark buttons
 @mixin btn-blue-dark {
-  border: 0.15rem solid $white; //light mode
-  background-color: $btn-dark-color; //light mode
-  color: white; //light mode
+  border: 0.15rem solid $white; //dark mode
+  background-color: $btn-dark-color; //dark mode
+  color: white; //dark mode
   font-weight: 500;
   &:hover {
-    border: 0.15rem solid $white;
-    background-color: white;
-    color: $btn-dark-color;
+    border: 0.15rem solid $white; //dark mode
+    background-color: white; //dark mode
+    color: $btn-dark-color; //dark mode
     transition: ease-in 0.4s;
     font-weight: 500;
   }
@@ -333,16 +379,16 @@ a {
 .navbartop-dark {
   @include fadein-effect(3s);
   background-color: $nav-bar-dark-color; //dark mode
-  color: white;
+  color: white; //dark mode
 }
 
 .-dark {
-  background-color: $body-dark-color;
-  color: white;
+  background-color: $body-dark-color; //dark mode
+  color: white; //dark mode
   //Dark theme card
   .main-card-dark {
-    background-color: $card-dark-color;
-    color: white;
+    background-color: $card-dark-color; //dark mode
+    color: white; //dark mode
   }
   //footer design
   @mixin footer-common-dark {
@@ -375,7 +421,7 @@ a {
       }
       //icons
       i {
-        color: white; //light mode
+        color: white; //dark mode
         font-size: 1.5rem;
         letter-spacing: 1rem;
       }
