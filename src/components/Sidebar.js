@@ -12,13 +12,15 @@ function Sidebar() {
   let mysideBar = document.getElementById("sideBar");
   let mysideThemebtn = document.getElementById("sideThemebtn");
   // When the user scrolls down 20px from the top of the document, show the sidebar
+  let sm = window.screen.width
+  let sh = window.screen.height
   window.onscroll = function () {
     scrollFunction();
   };
   function scrollFunction() {
-    if (
+    if ((
       document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+      document.documentElement.scrollTop > 20 ) && sm > 815 && sh > 815
     ) {
       mysideBar.style.display = "block";
       mysideThemebtn.style.display = "block";

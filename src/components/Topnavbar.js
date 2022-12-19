@@ -39,7 +39,7 @@ function Topnavbar() {
                 data-bs-placement="bottom"
                 title="Click to download my resume"
                 className={
-                  `btn me-3 shadow-sm ` +
+                  `btn m-1 shadow-sm ` +
                   (theme === "-dark" ? "send-btn-dark" : "send-btn")
                 }
                 download

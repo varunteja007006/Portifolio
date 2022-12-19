@@ -15,7 +15,7 @@ function ThemeButton() {
       {" "}
       <Button
         className={
-          `shadow-sm theme-btn ` +
+          `shadow-sm m-1 theme-btn ` +
           (theme === "-dark" ? "theme-btn-dark" : "theme-btn")
         }
         data-bs-toggle="tooltip"

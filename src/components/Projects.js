@@ -134,9 +134,23 @@ function Projects() {
                     Bootstrap SASS
                   </Badge>
                 </p>
-                MERN stack application, React on the front end and on the
-                backend Node js and Express as middleware with MongoDB database.
-                Hosted this web app on{" "}
+                MERN stack application,{" "}
+                <Badge pill bg="success">
+                  React
+                </Badge>{" "}
+                on the front end and on the backend{" "}
+                <Badge pill bg="success">
+                  Node js
+                </Badge>{" "}
+                and{" "}
+                <Badge pill bg="success">
+                  Express
+                </Badge>{" "}
+                as middleware with{" "}
+                <Badge pill bg="success">
+                  MongoDB
+                </Badge>{" "}
+                database. Hosted this web app on{" "}
                 <Badge pill bg="success">
                   Heroku
                 </Badge>{" "}
