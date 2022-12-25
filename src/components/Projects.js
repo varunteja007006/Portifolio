@@ -161,7 +161,7 @@ function Projects() {
                 (frontend).
               </div>
               <a
-                href="https://github.com/varunteja007006/MERNstack"
+                href="https://github.com/varunteja007006/MERNstackdeploy"
                 target="_blank"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
