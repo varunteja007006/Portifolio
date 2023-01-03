@@ -17,10 +17,11 @@ function Sidebar() {
   window.onscroll = function () {
     scrollFunction();
   };
+
   function scrollFunction() {
-    if ((
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20 ) && sm > 815 && sh > 815
+    if (
+      (document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20 ) && sm>850
     ) {
       mysideBar.style.display = "block";
       mysideThemebtn.style.display = "block";
