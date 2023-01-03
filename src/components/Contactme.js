@@ -22,8 +22,8 @@ function Contactme() {
         () => {
           window.location.reload(false);
         },
-        () => {
-          alert("Failed to send the message, please try again");
+        (error) => {
+          alert("Failed to send the message, please try again", error);
         }
       );
   };

@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 rough.js
 project_requirements.txt
+
+# Local Netlify folder
+.netlify
