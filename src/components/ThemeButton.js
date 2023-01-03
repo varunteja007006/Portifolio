@@ -36,7 +36,7 @@ function ThemeButton() {
         ) : (
           <>
             <span>
-              <i className="fa-regular fa-sun"></i>
+              <i className="fa-regular fa-lightbulb   "></i>
             </span>{" "}
             Light Mode
           </>

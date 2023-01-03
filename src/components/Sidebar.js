@@ -13,19 +13,21 @@ function Sidebar() {
   let mysideThemebtn = document.getElementById("sideThemebtn");
   // When the user scrolls down 20px from the top of the document, show the sidebar
   let sm = window.screen.width
-  let sh = window.screen.height
   window.onscroll = function () {
     scrollFunction();
   };
 
   function scrollFunction() {
     if (
-      (document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20 ) && sm>850
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20 
     ) {
-      mysideBar.style.display = "block";
-      mysideThemebtn.style.display = "block";
-    } else {
+      if (sm>850) {
+            mysideBar.style.display = "block";
+            mysideThemebtn.style.display = "block";
+      }
+  }
+    else {
       mysideBar.style.display = "none";
       mysideThemebtn.style.display = "none";
     }

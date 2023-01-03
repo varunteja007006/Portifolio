@@ -1,18 +1,20 @@
 * Add aria labels and other stuff to improve the accessibility
-aria-label="open"
+    aria-label="open"
 
-* site name - beautiful-meerkat-18a36f
+* site name - varunteja007006
 
-* Google Presentation
+* URL - https://varunteja007006.netlify.app/
 
-* side nav or quick scroll
+* Google Presentation - less priority
+
+* side nav or quick scroll - Done - 
+    Need refinement
 
 
-Email JS - add tokens in .env file
-index file 
-Contactme.js file
+Email JS - add tokens in .env file - Not working check it 
 
-Projects
+Projects Details: 
+
 -SAP PMGM and EC - TCS 
 
 -Portifolio (https://github.com/varunteja007006/Portifolio)
