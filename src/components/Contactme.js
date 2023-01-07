@@ -10,7 +10,7 @@ function Contactme() {
   const refForm = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.init(REACT_APP_EMAILJS_PUBLIC_KEY);
+    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_KEY,
