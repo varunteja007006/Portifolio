@@ -194,7 +194,7 @@ a {
 }
 
 @mixin sideBar-common {
-  display: none;
+  display: block;
   width: 10rem;
   position: fixed;
   bottom: 40%;
@@ -202,7 +202,7 @@ a {
   z-index: 99;
 }
 @mixin sideThemebtn-common {
-  display: none;
+  display: block;
   width: 10rem;
   position: fixed;
   bottom: 20%;
