@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  Button,
-  Card,
-  Collapse,
-  Badge,
-} from "react-bootstrap";
+import { Button, Card, Collapse, Badge } from "react-bootstrap";
 
 import budget from "../assests/budget/budget.png";
 import budget_1 from "../assests/budget/budget_1.png";
@@ -41,7 +36,6 @@ import sports_management_6 from "../assests/sports_management/sports_management_
 import sports_management_7 from "../assests/sports_management/sports_management_7.png";
 import sports_management_8 from "../assests/sports_management/sports_management_8.png";
 import sports_management_9 from "../assests/sports_management/sports_management_9.png";
-
 
 import portifolio from "../assests/portifolio/portifolio.png";
 import portifolio_1 from "../assests/portifolio/portifolio_1.png";
@@ -534,7 +528,7 @@ function Projects() {
                   <i className="fa-brands fa-github" alt=""></i>
                 </a>
                 <a
-                  href="https://beautiful-meerkat-18a36f.netlify.app/"
+                  href="https://varunteja007006.netlify.app/"
                   target="_blank"
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
